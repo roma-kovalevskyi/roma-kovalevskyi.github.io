@@ -260,7 +260,11 @@ body {
 
 .remove-row,
 .remove-col {
+<<<<<<< HEAD
     background-color: #fa5a5a;
+=======
+    background-color: #fa5a5ae6;
+>>>>>>> 7e9dfdb160ca4233ac1f5e64bccacddec03aeff8
 }
 
 .insert-row,
@@ -382,8 +386,11 @@ body {
     .input-data {
         padding: 20px;
     }
+<<<<<<< HEAD
     .table__cell {
         width: 45px;
         height: 45px;
     }
+=======
+>>>>>>> 7e9dfdb160ca4233ac1f5e64bccacddec03aeff8
 }
