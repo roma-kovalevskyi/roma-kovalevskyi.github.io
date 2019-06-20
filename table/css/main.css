@@ -383,7 +383,7 @@ body {
         padding: 20px;
     }
     .table__cell {
-        width: 45px;
         height: 45px;
+        width: 45px;
     }
 }
