@@ -1,15 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Генератор таблиц</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-
+    <!--begin input-data-->
+    <div class="input-data-wrapper">
+        <div class="input-data">
+            <form class="form" action="#">
+                <h3 class="form__caption">Генератор таблиц</h3>
+                <label for="rows" class="form__label">Количество строк</label>
+                <input type="text" name="rows" id="rows" class="form__input">
+                <label for="cols" class="form__label">Количество столбцов</label>
+                <input type="text" name="cols" id="cols" class="form__input">
+                <button type="button" class="form__button create-table">Создать таблицу</button>
+            </form>
+        </div>
+    </div>
+    <!--end input-data-->
+    <!--begin settings-->
+    <div class="settings">
+        <!--begin appearance-->
+        <div class="appearance">
+            <h3 class="appearance__caption">Внешний вид</h3>
+            <div class="appearance__border-color">
+                <label class="appearance__label" for="border-color">Выбрать цвет границ</label>
+                <input type="color" class="appearance__input" id="border-color" name="border-color" value="#eef7fd">
+            </div>
+            <div class="appearance__background-color">
+                <label class="appearance__label" for="background-color">Выбрать цвет заливки</label>
+                <input type="color" class="appearance__input" id="background-color" name="background-color" value="#00cccd">
+            </div>
+            <div class="appearance__text-color">
+                <label class="appearance__label" for="text-color">Выбрать цвет текста</label>
+                <input type="color" class="appearance__input" id="text-color" name="text-color" value="#999999">
+            </div>
+            <div class="appearance__border-style">
+                <button type="button" class="toggle-button">Стиль границ</button>
+                <div class="toggle-list">
+                    <li class="toggle-list__item" data-border-style="solid">Solid</li>
+                    <li class="toggle-list__item toggle-list__item_dashed" data-border-style="dashed">Dashed</li>
+                    <li class="toggle-list__item toggle-list__item_dotted" data-border-style="dotted">Dotted</li>
+                </div>
+            </div>
+        </div>
+        <!--end appearance-->
+        <!--begin constructor-->
+        <div class="constructor">
+            <h3 class="constructor__caption">Конструктор</h3>
+            <div class="constructor__remove-cells">
+                <button type="button" class="remove-row constructor__btn" data-remove="row">Удалить строку</button>
+                <button type="button" class="remove-col constructor__btn" data-remove="col">Удалить столбец</button>
+            </div>
+            <div class="constructor__insert-cells">
+                <button type="button" class="insert-row constructor__btn" data-insert="row">Вставить строку</button>
+                <button type="button" class="insert-col constructor__btn" data-insert="col">Вставить столбец</button>
+            </div>
+            <div class="constructor__sort-table">
+                <button type="button" class="sort-plus constructor__btn" data-index="plus">Сортировать таблицу по возрастанию</button>
+                <button type="button" class="sort-minus constructor__btn" data-index="minus">Сортировать таблицу по убыванию</button>
+            </div>
+            <div class="constructor__clear-table">
+                <button type="button" class="clear constructor__btn">Очистить таблицу</button>
+            </div>
+        </div>
+        <!--end constructor-->
+    </div>
+    <!--end settings-->
+    <!--begin table-->
+    <div class="table-wrapper">
+    </div>
+    <!--end table-->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
