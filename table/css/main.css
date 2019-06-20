@@ -260,7 +260,7 @@ body {
 
 .remove-row,
 .remove-col {
-    background-color: #fa5a5ae6;
+    background-color: #fa5a5a;
 }
 
 .insert-row,
@@ -381,5 +381,9 @@ body {
 @media screen and (max-width: 500px) {
     .input-data {
         padding: 20px;
+    }
+    .table__cell {
+        width: 45px;
+        height: 45px;
     }
 }
