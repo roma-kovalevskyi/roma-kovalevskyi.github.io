@@ -8,7 +8,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(93,213,113,0.8588235294117647);
+    background: #7cd5f3;
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -33,13 +33,13 @@ body {
     border: none;
     background-color: #fff;
     box-shadow: 0 0 5px #848484;
-    color: #489c56;
+    color: #589db5;
     outline: none;
     padding: 18px 40px 16px 22px;
 }
 
 .form__input::-webkit-input-placeholder {
-    color: #57bd68;
+    color: #589db5;
 }
 
 .form__button {
@@ -52,7 +52,7 @@ body {
     outline: none;
     cursor: pointer;
     font-size: 32px;
-    color: #57bd68;
+    color: #60b0cc;
 }
 
 
@@ -66,8 +66,8 @@ body {
 
 .list__item {
     list-style: none;
-    color: #57bd68;
-    border-bottom: 2px solid #5ed672db;
+    color: #60b0cc;
+    border-bottom: 2px solid #60b0cc;
     background-color: #fff;
     padding: 10px 10px 10px 15px;
     font-weight: 600;
@@ -84,7 +84,7 @@ body {
     display: block;
     width: 30px;
     height: 30px;
-    border: 2px solid #57bd68;
+    border: 2px solid #60b0cc;
     cursor: pointer;
 }
 
@@ -113,7 +113,7 @@ body {
 .list__item-btn:after {
     position: absolute;
     content: '\2716';
-    color: #57bd68;
+    color: #60b0cc;
     font-size: 28px;
     top: -5px;
     right: 2px;

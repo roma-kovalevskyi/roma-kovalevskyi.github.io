@@ -262,8 +262,7 @@ let buttonClear = document.querySelector('.clear');
 buttonClear.addEventListener("click", clearTable);
 
 function clearTable() {
-    let table = document.querySelector('.table'),
-        inputs = document.querySelectorAll('.table__input');
+    let inputs = document.querySelectorAll('.table__input');
 
     for (let input of inputs) {
         input.value = '';
