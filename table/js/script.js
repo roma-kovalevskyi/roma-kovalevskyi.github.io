@@ -14,12 +14,12 @@ function validateForm() {
 
     if (regexp.test(rowsInput.value) && regexp.test(colsInput.value)) {
         document.body.classList.add('changed');
-        formContainer.classList.add('input-data_hidden');
-        tableContainer.classList.add('table-wrapper_visible');
-        settings.classList.add('settings_visible');
+        formContainer.classList.add('input-data_hidden');    
+        tableContainer.classList.add('table-wrapper_visible');       
+        settings.classList.add('settings_visible');        
         createTable();
     } else {
-        alert('Заполните все поля числами!');
+        alert ('Заполните все поля числами!');
     }
 }
 
@@ -35,8 +35,8 @@ function createTable() {
 
     for (let i = 0; i < rows; i++) {
         let tr = document.createElement('tr');
-
-        if (i === 0) {
+    
+        if (i === 0 ) {
             tr.classList.add('table__head')
         }
 
@@ -59,7 +59,7 @@ function createTable() {
 /*-----------------------------setCellWidth-------------------------------*/
 tableContainer.addEventListener('input', setCellWidth);
 
-function setCellWidth(e) {
+function setCellWidth(e) {   
     let table = document.querySelector('.table'),
         target = e.target;
 
@@ -90,15 +90,19 @@ function changeBorderStyle(e) {
         list.classList.remove('toggle-list-active');
     }
 
-    for (let cell of cells) {
+    for (let cell of  cells) {
         if (target.dataset.borderStyle === 'dashed') {
             cell.style.borderStyle = 'dashed';
-        } else if (target.dataset.borderStyle === 'dotted') {
+        } 
+
+        else if (target.dataset.borderStyle === 'dotted') {
             cell.style.borderStyle = 'dotted';
-        } else {
+        } 
+
+        else {
             cell.style.borderStyle = 'solid';
         }
-
+        
     }
 }
 
@@ -120,15 +124,17 @@ function handlerChangeColor(propertyName, value) {
     if (propertyName === 'background-color') {
         for (let cell of headCells) {
             cell.style.setProperty(propertyName, value);
-        }
+        } 
 
         table.style.borderBottom = `3px solid ${backgroundColor.value}`;
-    } else if (propertyName === 'color') {
+    } 
+    else if (propertyName === 'color') {
         for (let input of inputs) {
             if (input.parentNode.parentNode.classList.contains('table__head')) continue;
             input.style.setProperty(propertyName, value);
         }
-    } else {
+    } 
+    else {
         for (let input of inputs) {
             input.parentNode.style.setProperty(propertyName, value);
         }
@@ -166,7 +172,8 @@ function removeCells(e) {
             }
 
             lastRow.parentNode.removeChild(lastRow);
-        } else {
+        } 
+        else {
             for (let i = 0; i < rows.length; i++) {
                 for (let j = rows[i].children.length - 1; j > 0; j--) {
                     if (j > 0) {
@@ -174,7 +181,7 @@ function removeCells(e) {
                         break;
                     }
                 }
-
+                
             }
         }
     }
@@ -196,19 +203,21 @@ function insertCells(e) {
 
     if (target.tagName === 'BUTTON') {
         if (target.dataset.insert === 'row') {
-            table.appendChild(clonedRow);
+            table.appendChild(clonedRow);   
 
             clonedRowCells.forEach(item => item.children[0].value = '');
-        } else {
+        } 
+        else {
             for (let row of rows) {
                 let td = document.createElement('td');
-                td.classList.add('table__cell');
+                td.classList.add('table__cell');        
                 row.appendChild(td);
-                td.style.borderStyle = td.previousElementSibling.style.borderStyle;
+                td.style.borderStyle = td.previousElementSibling.style.borderStyle;                
+                td.style.backgroundColor = td.previousElementSibling.style.backgroundColor;                          
                 let input = document.createElement('INPUT');
                 input.type = 'text';
-                input.classList.add('table__input');
-                td.appendChild(input);
+                input.classList.add('table__input');        
+                td.appendChild(input);        
             }
         }
     }
@@ -225,7 +234,7 @@ function sortTable(e) {
         target = e.target;
 
     for (let i = 0; i < rows.length; i++) {
-
+        
         for (let j = 0; j < rows.length; j++) {
             if (j === 0) continue;
             array.push(rows[j].children[i].children[0].value);
@@ -241,16 +250,16 @@ function sortTable(e) {
 
             } else {
                 if (target.dataset.index === 'plus') {
-                    array.sort((a, b) => a - b); // по возрастанию
+                    array.sort((a,b) => a - b); // по возрастанию
                 } else {
-                    array.sort((a, b) => b - a); // по убыванию
+                    array.sort((a,b) => b - a); // по убыванию
                 }
             }
 
             for (let j = 0; j < rows.length; j++) {
                 if (j === 0) continue;
                 rows[j].children[i].children[0].value = array.splice(0, 1);
-            }
+            } 
         }
     }
 }
@@ -262,7 +271,7 @@ let buttonClear = document.querySelector('.clear');
 buttonClear.addEventListener("click", clearTable);
 
 function clearTable() {
-    let inputs = document.querySelectorAll('.table__input');
+    let inputs = document.querySelectorAll('.table__input');  
 
     for (let input of inputs) {
         input.value = '';
