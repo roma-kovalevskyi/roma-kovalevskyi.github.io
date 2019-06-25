@@ -35,7 +35,7 @@ body {
     box-shadow: 0 0 5px #848484;
     color: #489c56;
     outline: none;
-    padding: 17px 40px 16px 22px;
+    padding: 18px 40px 16px 22px;
 }
 
 .form__input::-webkit-input-placeholder {
