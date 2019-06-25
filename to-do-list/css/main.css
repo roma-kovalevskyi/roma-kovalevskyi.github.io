@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic');
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #5ed672db;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#root {
+    width: 60vw;
+    margin: auto;
+    text-align: center;
+}
+
+
+/*--form--*/
+
+.form {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    margin-top: 30px;
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px #848484;
+    color: #489c56;
+    outline: none;
+    padding: 17px 40px 16px 22px;
+}
+
+.form__input::-webkit-input-placeholder {
+    color: #57bd68;
+}
+
+.form__button {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 32px;
+    color: #57bd68;
+}
+
+
+/*--list--*/
+
+.list {
+    padding-left: 0;
+    margin-top: 20px;
+    box-shadow: 0 1px 5px #848484;
+}
+
+.list__item {
+    list-style: none;
+    color: #57bd68;
+    border-bottom: 2px solid #5ed672db;
+    background-color: #fff;
+    padding: 10px 10px 10px 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list__item:last-child {
+    border-bottom: none;
+}
+
+.list__item-label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #57bd68;
+    cursor: pointer;
+}
+
+.list__item-checkbox {
+    display: none;
+}
+
+.list__item-checkbox:checked+.list__item-label {
+    background: url(../img/check.png) no-repeat center;
+}
+
+.list__item-span {
+    display: block;
+}
+
+.list__item-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.list__item-btn:after {
+    position: absolute;
+    content: '\2716';
+    color: #57bd68;
+    font-size: 28px;
+    top: -5px;
+    right: 2px;
+}
+
+
+/*--media--*/
+
+@media screen and (max-width: 992px) {
+    #root {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #root {
+        width: 85vw;
+    }
+}
