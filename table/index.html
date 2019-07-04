@@ -13,7 +13,7 @@
     <!--begin input-data-->
     <div class="input-data-wrapper">
         <div class="input-data">
-            <form class="form" action="#">
+            <form class="input-data__form form" action="#">
                 <h3 class="form__caption">Генератор таблиц</h3>
                 <label for="rows" class="form__label">Количество строк</label>
                 <input type="text" name="rows" id="rows" class="form__input">
@@ -55,19 +55,19 @@
         <div class="constructor">
             <h3 class="constructor__caption">Конструктор</h3>
             <div class="constructor__remove-cells">
-                <button type="button" class="remove-row constructor__btn" data-remove="row">Удалить строку</button>
-                <button type="button" class="remove-col constructor__btn" data-remove="col">Удалить столбец</button>
+                <button type="button" class="remove-row constructor__btn btn" data-remove="row">Удалить строку</button>
+                <button type="button" class="remove-col constructor__btn btn" data-remove="col">Удалить столбец</button>
             </div>
             <div class="constructor__insert-cells">
-                <button type="button" class="insert-row constructor__btn" data-insert="row">Вставить строку</button>
-                <button type="button" class="insert-col constructor__btn" data-insert="col">Вставить столбец</button>
+                <button type="button" class="insert-row constructor__btn btn" data-insert="row">Вставить строку</button>
+                <button type="button" class="insert-col constructor__btn btn" data-insert="col">Вставить столбец</button>
             </div>
             <div class="constructor__sort-table">
-                <button type="button" class="sort-plus constructor__btn" data-index="plus">Сортировать таблицу по возрастанию</button>
-                <button type="button" class="sort-minus constructor__btn" data-index="minus">Сортировать таблицу по убыванию</button>
+                <button type="button" class="sort-plus constructor__btn btn" data-index="plus">Сортировать таблицу по возрастанию</button>
+                <button type="button" class="sort-minus constructor__btn btn" data-index="minus">Сортировать таблицу по убыванию</button>
             </div>
             <div class="constructor__clear-table">
-                <button type="button" class="clear constructor__btn">Очистить таблицу</button>
+                <button type="button" class="clear constructor__btn btn">Очистить таблицу</button>
             </div>
         </div>
         <!--end constructor-->
@@ -75,9 +75,24 @@
     <!--end settings-->
     <!--begin table-->
     <div class="table-wrapper">
-    </div>
+    </div>    
     <!--end table-->
+    <!--begin table-code-->
+    <div class="table-code">
+        <div class="table-code__buttons">
+            <button type="button" class="table-code__btn btn generate-code">Сгенерировать код таблицы</button>
+            <button type="button" class="table-code__btn btn copy-code">Скопировать</button>
+        </div>
+        <div class="table-code__textarea-wrapper">
+            <textarea name="code" class="table-code__textarea"></textarea>
+        </div>  
+    </div>    
+    <!--end table-code-->
     <script src="js/script.js"></script>
 </body>
 
 </html>
+
+
+
+

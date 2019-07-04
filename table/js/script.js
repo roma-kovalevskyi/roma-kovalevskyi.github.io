@@ -2,9 +2,10 @@ let rowsInput = document.getElementById('rows'),
     colsInput = document.getElementById('cols'),
     button = document.querySelector('.create-table'),
     formContainer = document.querySelector('.input-data-wrapper'),
+    settings = document.querySelector('.settings'),
     tableContainer = document.querySelector('.table-wrapper'),
-    settings = document.querySelector('.settings');
-
+    tableCode = document.querySelector('.table-code');
+    
 
 /*-----------------------------validateForm-------------------------------*/
 button.addEventListener('click', validateForm);
@@ -15,9 +16,12 @@ function validateForm() {
     if (regexp.test(rowsInput.value) && regexp.test(colsInput.value)) {
         document.body.classList.add('changed');
         formContainer.classList.add('input-data_hidden');    
-        tableContainer.classList.add('table-wrapper_visible');       
-        settings.classList.add('settings_visible');        
+        settings.classList.add('settings_visible');  
+        tableContainer.classList.add('table-wrapper_visible');  
+        tableCode.classList.add('table-code_visible');
+
         createTable();
+        
     } else {
         alert ('Заполните все поля числами!');
     }
@@ -156,7 +160,6 @@ function changeTextColor() {
 
 /*-----------------------------removeCells-----------------------------*/
 let removeTableCells = document.querySelector('.constructor__remove-cells');
-
 removeTableCells.addEventListener("click", removeCells);
 
 function removeCells(e) {
@@ -191,7 +194,6 @@ function removeCells(e) {
 
 /*-----------------------------insertCells-----------------------------*/
 let insertTableRow = document.querySelector('.constructor__insert-cells');
-
 insertTableRow.addEventListener("click", insertCells);
 
 function insertCells(e) {
@@ -213,7 +215,8 @@ function insertCells(e) {
                 td.classList.add('table__cell');        
                 row.appendChild(td);
                 td.style.borderStyle = td.previousElementSibling.style.borderStyle;                
-                td.style.backgroundColor = td.previousElementSibling.style.backgroundColor;                          
+                td.style.backgroundColor = td.previousElementSibling.style.backgroundColor;   
+                                       
                 let input = document.createElement('INPUT');
                 input.type = 'text';
                 input.classList.add('table__input');        
@@ -267,7 +270,6 @@ function sortTable(e) {
 
 /*-----------------------------clearTable-----------------------------*/
 let buttonClear = document.querySelector('.clear');
-
 buttonClear.addEventListener("click", clearTable);
 
 function clearTable() {
@@ -277,3 +279,71 @@ function clearTable() {
         input.value = '';
     }
 }
+
+
+/*-----------------------------generateTableCode-----------------------------*/
+let buttonGenerateCode = document.querySelector('.generate-code');
+buttonGenerateCode.addEventListener("click", generateTableCode);
+
+function generateTableCode() {
+    let isConfirm = confirm("Внимание! После этого редактирование таблицы будет запрещено. Продолжить?");
+
+    if (isConfirm) {
+        let table = document.querySelector('.table'),
+            cells = document.querySelectorAll('.table__cell'),
+            textarea = document.querySelector('.table-code__textarea');
+
+        for (var i = 0; i < cells.length; i++) {
+            if (!cells[i].parentNode.classList.contains('table__head')) {
+                cells[i].style.color = cells[i].children[0].style.color || '#999999';
+            } 
+            
+            cells[i].innerHTML = cells[i].children[0].value;
+        }    
+
+        textarea.value = 
+
+`<style type="text/css">
+.table {
+    border-collapse: collapse;
+    border-bottom: 3px solid #00cccd;
+    box-shadow: 0 0 5px #b9b9b9;
+    font-family: Arial, sans-serif;
+}
+
+.table__head .table__cell {
+    background-color: #00cccd;
+    font-weight: bold;
+}
+
+.table__cell {
+    border: 1px solid #d5e8f5;
+    background-color: #fff;
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 8px 8px 8px;
+}
+</style> 
+
+${table.outerHTML}`;
+
+    }
+}
+
+
+/*-----------------------------copyTableCode-----------------------------*/
+let buttonCopyCode = document.querySelector('.copy-code');
+buttonCopyCode.addEventListener("click", copyTableCode);
+
+function copyTableCode() {
+    let textarea = document.querySelector('.table-code__textarea');
+
+    textarea.select();
+    document.execCommand('copy');
+}
+
+
+
