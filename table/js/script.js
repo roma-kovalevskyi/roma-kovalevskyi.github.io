@@ -11,7 +11,7 @@ let rowsInput = document.getElementById('rows'),
 button.addEventListener('click', validateForm);
 
 function validateForm() {
-    let regexp = /\d+/;
+    let regexp = /^\d+$/;
 
     if (regexp.test(rowsInput.value) && regexp.test(colsInput.value)) {
         document.body.classList.add('changed');
