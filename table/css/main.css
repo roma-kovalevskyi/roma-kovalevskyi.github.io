@@ -181,6 +181,7 @@ body {
 
 .toggle-list {
     display: none;
+    padding: 0;
 }
 
 .toggle-list-active {
