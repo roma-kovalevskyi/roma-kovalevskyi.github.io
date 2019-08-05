@@ -1,0 +1,140 @@
+#popupBoxCallToggle{display: inline-block; position: relative;}
+.mbc-popupbutton{
+	padding: 10px 16px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.3333333;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid;
+    border-radius: 6px;
+	background-color: #d9534f;
+    border-color: #d9534f;
+    color: #fff;
+}
+.mbc-popupbutton:focus, .mbc-popupbutton:hover{
+	color: #fff;
+    background-color: #ac2925;
+    border-color: #761c19;
+}
+
+.mbc-modalboxbackground {
+    background: rgba(56, 56, 56, 0.65);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999999999999;
+    display: none;
+    position: fixed;
+}
+
+            .mbc-modalboxcallwin {
+                background: rgba(56, 56, 56, 0.95);
+                height: 353px;
+                width: 100%;
+                max-width: 600px;
+                top: 80px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 22px;
+                margin: 0 auto;
+                z-index: 9999999999999;
+                display: none;
+                position: fixed;
+                box-shadow: 0 0 10px rgb(232, 232, 232);
+                border-radius: 14px 14px 14px 0;
+                text-align: center;
+                color: #fff;
+            }
+            .mbc-modalwinlabel {
+                margin-top: 40px;
+                opacity: 0.9;
+                cursor: pointer;
+                width: 100%;
+                min-width: 200px;
+                max-width: 280px;
+                display: inline-block;
+            }
+            .mbc-modalwinlabel:hover{
+                opacity: 1;
+            }
+            .mbc-modalwinlabel a{
+                text-decoration: none!important;
+                color: #fff;
+            }
+            #myCloseBoxCall{
+                font-size: 22px;
+                font-family: Helvetica, sans-serif;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                background: url(winkrestik1.png) no-repeat;
+                margin-left: auto;
+                margin-right: 0em;
+                opacity: 0.67;
+                cursor: pointer;
+            }
+            #myCloseBoxCall:hover{
+                background: url(winkrestik.png) no-repeat;
+                opacity: 0.92;
+            }
+            .mbc-myPhoneWin{
+                display: inline-block;
+                padding: 10px 16px;
+                font-size: 18px;
+                font-weight: normal;
+                line-height: 1.3333333;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-image: none;
+                border: 1px solid transparent;
+                background-color: #ff0000;
+                border-color: #ff0000;
+                border-radius: 0px;
+                margin: auto;
+            }
+            .mbc-myPhoneWin:hover{
+                background-color: #de746e;
+                border-color: #de746e;
+            }
+            .mbc-myWhatsappWin{
+                display: inline-block;
+                padding: 10px 16px;
+                font-size: 18px;
+                font-weight: normal;
+                line-height: 1.3333333;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-image: none;
+                border: 1px solid transparent;
+                background-color: #259618;
+                border-color: #259618;
+                border-radius: 0px;
+                margin: auto;
+            }
+            .mbc-myWhatsappWin{
+                background-color: #83de79;
+                border-color: #83de79;
+            }
