@@ -1,0 +1,180 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    background: #151417;
+}
+
+body.is_modal_opened {
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+button,
+input {
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Titles */
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+@media (max-width: 992px) {
+    h3 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+
+h4 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+    h4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    h4 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h4 {
+        font-size: 1.4rem;
+    }
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+    h5 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    h5 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h5 {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 0 16px;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
