@@ -1,3 +1,5 @@
+/* Header */
+
 .header {
     padding-bottom: 2rem;
 }
@@ -46,6 +48,8 @@
     max-width: 190px;
 }
 
+/* Search */
+
 .search__input-box {
     position: relative;
     height: 50px;
@@ -54,7 +58,7 @@
 .search__input-box span {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    margin-top: -10px;
     left: 20px;
     width: 20px;
     height: 20px;
@@ -74,6 +78,8 @@
     opacity: 1;
     padding: 2rem 2rem 2rem 5rem;
 }
+
+/* Content */
 
 .content__inner {
     background: #211d1c;
@@ -97,8 +103,10 @@
 .main-slider__inner {
     width: 100%;
     display: inline-block;
+    vertical-align: middle;
     white-space: nowrap;
-    animation: slide 20s infinite ease-in-out;
+    font-size: 0;
+    transition: margin-left .3s ease;
 }
 
 .main-slider__item {
@@ -112,7 +120,6 @@
     position: relative;
     min-width: 100%;
     overflow: hidden;
-    transition: transform 1s ease-in-out;
 }
 
 .main-slider__item:before {
@@ -170,7 +177,7 @@
     z-index: 3;
 }
 
-.main-slider__pagination-dot {
+.main-slider__pagination-item {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -181,16 +188,8 @@
     transition: background-color 0.3s;
 }
 
-.main-slider__pagination-dot.active {
+.main-slider__pagination-item.active {
     background-color: #22c55e;
-}
-
-@keyframes slide {
-    0%, 20% { transform: translateX(0); }
-    25%, 45% { transform: translateX(-100%); }
-    50%, 70% { transform: translateX(-200%); }
-    75%, 95% { transform: translateX(-300%); }
-    100% { transform: translateX(-400%); }
 }
 
 .tag {
@@ -249,61 +248,39 @@
     font-size: 2.6rem;
     font-weight: 700;
     line-height: 3.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.slider-wrapper {
+    position: relative;
 }
 
 .slider-container {
     width: 100%;
-    padding-bottom: 20px;
+    padding: 20px 0;
+    position: relative;
     overflow: hidden;
+    z-index: 9;
 }
 
 .slider-content {
     width: 100%;
     white-space: nowrap;
-    padding-bottom: 20px; /* Extra space for scroll bar */
+    padding-bottom: 20px;
+    transition: margin-left .3s ease;
 }
 
 .slide {
     display: inline-block;
-    width: 210px; /* Adjust based on your slide width */
-    margin-right: 20px; /* Adjust based on your margin between slides */
+    width: 208px;
+    margin-right: 20px;
     vertical-align: top;
     cursor: pointer;
-    animation: slide-animation 12s infinite ease-in-out;
+    transition: scale .3s ease;
 }
 
-@keyframes slide-animation {
-    0%, 10% {
-        transform: translateX(0);
-    }
-    20% {
-        transform: translateX(calc(-230px * 1));
-    }
-    30% {
-        transform: translateX(calc(-230px * 1));
-    }
-    40% {
-        transform: translateX(calc(-230px * 2));
-    }
-    50% {
-        transform: translateX(calc(-230px * 2));
-    }
-    60% {
-        transform: translateX(calc(-230px * 3));
-    }
-    70% {
-        transform: translateX(calc(-230px * 3));
-    }
-    80% {
-        transform: translateX(calc(-230px * 4));
-    }
-    90% {
-        transform: translateX(calc(-230px * 4));
-    }
-    100% {
-        transform: translateX(calc(-230px * 5));
-    }
+.slide:hover {
+    scale: 1.05;
 }
 
 .slide__img {
@@ -318,6 +295,39 @@
     text-align: center;
     white-space: normal;
 }
+
+.slider-btn {
+    display: inline-block;
+    background: #07080899;
+    border-radius: 7px;
+    color: #ffffff;
+    cursor: pointer;
+    height: 5rem;
+    position: absolute;
+    top: 32%;
+    width: 5rem;
+    transition: opacity .3s ease;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    opacity: 0.9;
+}
+
+.slider-btn img {
+    vertical-align: middle;
+}
+
+.prev_btn {
+    left: -5px;
+    rotate: 180deg;
+}
+
+.next_btn {
+    right: 5px;
+}
+
+/* Footer */
 
 .footer {
     background: #171514;
@@ -397,40 +407,40 @@
     text-align: center;
 }
 
-.left__content {
+.footer__left-content {
     font-size: 1.6rem;
     line-height: 2.4rem;
     max-width: 50rem;
     text-align: center;
 }
 
-.right__title {
+.footer__right-title {
     font-size: 2.2rem;
     font-weight: 700;
     color: #bb561d;
     margin-bottom: 3.6rem;
 }
 
-.right__subtitle {
+.footer__right-subtitle {
     font-size: 1.8rem;
     margin-bottom: 2.8rem;
     cursor: pointer;
 }
 
-.right__subtitle--subitems {
+.footer__right-subtitle--subitems {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     opacity: .6;
     cursor: pointer;
 }
 
-.right__item {
+.footer__right-item {
     display: inline-block;
     vertical-align: top;
     width: calc(50% - 40px);
     margin-right: 32px;
 }
 
-.right__item:last-child {
+.footer__right-item:last-child {
     margin-right: 0;
 }
