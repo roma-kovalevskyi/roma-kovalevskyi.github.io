@@ -18,8 +18,11 @@
 
 // let clickCount = 0;
 
+alert('Without document ready');
 
 $(document).ready(function () {
+    alert('Document ready');
+
     let sliderPerRow = 5;
     let slider = $('.main-slider__inner');
 
