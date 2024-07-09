@@ -56,7 +56,7 @@
                                     </div>
                                     <h5>Приключения, Фэнтези</h5>
                                     <div class="movie_btns">
-                                        <button class="btn" onclick="alert('Inline alert!')">
+                                        <button class="btn" id="test-btn">
                                           <span class="btn__left-icon">
                                             <img src="img/icons/play_sm.svg" alt="">
                                           </span>
@@ -971,6 +971,52 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://roma-kovalevskyi.github.io/og/js/main.js"></script>
+<!--    <script src="https://roma-kovalevskyi.github.io/og/js/main.js"></script>-->
+    <script>
+        // alert('Without document ready');
+
+        $(document).ready(function () {
+            // alert('Document ready');
+
+            $('#test-btn').on('click', function() {
+                alert('Button clicked!');
+            });
+
+            let sliderPerRow = 5;
+            let slider = $('.main-slider__inner');
+
+            $('.main-slider__pagination-item').on('click', function() {
+                let index = $(this).index();
+
+                let marginLeft = -index * 100;
+                slider.css('margin-left', `${marginLeft}%`);
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+
+            $('.movies_slider').each(function(index, element) {
+                let marginLeft = 0;
+                let sliderContent = $(element).find('.slider-content');
+
+                let sliderItems = sliderContent.children();
+                let sliderItemsCount = sliderItems.length;
+                let sliderMaxMovesCount = sliderItemsCount / sliderPerRow - 1;
+
+                $(element).find('.prev_btn').on('click', function() {
+                    if (marginLeft === 0) return;
+
+                    marginLeft += 100;
+                    sliderContent.css('margin-left', `${marginLeft}%`);
+                });
+
+                $(element).find('.next_btn').on('click', function() {
+                    if (marginLeft === -(sliderMaxMovesCount * 100)) return;
+
+                    marginLeft -= 100;
+                    sliderContent.css('margin-left', `${marginLeft}%`);
+                });
+
+            });
+        });
+    </script>
 </body>
 </html>
