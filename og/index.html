@@ -971,21 +971,18 @@
         </div>
     </footer>
 
-<!--    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>-->
-    <!--    <script src="https://roma-kovalevskyi.github.io/og/js/main.js"></script>-->
+    <script src="js/jquery.js"></script>
     <script>
-        // alert('Without document ready');
-
-        document.getElementById('test-btn').addEventListener('click', function() {
-            alert('Button without Jquery!!!');
-        });
+        if (typeof jQuery !== 'undefined') {
+            alert('jQuery is loaded');
+        } else {
+            alert('jQuery is not loaded');
+        }
 
         $(document).ready(function () {
-            // alert('Document ready');
-
-            // $('#test-btn').on('click', function() {
-            //     alert('Button clicked!');
-            // });
+            $('#test-btn').on('click', function() {
+                alert('Button clicked!');
+            });
 
             let sliderPerRow = 5;
             let slider = $('.main-slider__inner');
