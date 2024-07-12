@@ -972,21 +972,23 @@
 
     <script src="js/jquery.js"></script>
     <script>
-        if (typeof jQuery !== 'undefined') {
-            alert('jQuery is loaded');
-        } else {
-            alert('jQuery is not loaded');
-        }
+        alert('Native JS is loaded!');
+
+        // if (typeof jQuery !== 'undefined') {
+        //     alert('jQuery is loaded');
+        // } else {
+        //     alert('jQuery is not loaded');
+        // }
 
         $(document).ready(function () {
-            $('#test-btn').on('click', function() {
+            $('#test-btn').click(function() {
                 alert('Button clicked!');
             });
 
             let sliderPerRow = 5;
             let slider = $('.main-slider__inner');
 
-            $('.main-slider__pagination-item').on('click', function() {
+            $('.main-slider__pagination-item').click(function() {
                 let index = $(this).index();
 
                 let marginLeft = -index * 100;
@@ -1002,14 +1004,14 @@
                 let sliderItemsCount = sliderItems.length;
                 let sliderMaxMovesCount = sliderItemsCount / sliderPerRow - 1;
 
-                $(element).find('.prev_btn').on('click', function() {
+                $(element).find('.prev_btn').click(function() {
                     if (marginLeft === 0) return;
 
                     marginLeft += 100;
                     sliderContent.css('margin-left', `${marginLeft}%`);
                 });
 
-                $(element).find('.next_btn').on('click', function() {
+                $(element).find('.next_btn').click(function() {
                     if (marginLeft === -(sliderMaxMovesCount * 100)) return;
 
                     marginLeft -= 100;
