@@ -997,11 +997,11 @@
 
                 $('.main-slider__pagination-item').click(function() {
                     alert('Pagination main slider was clicked!')
-                    let index = $(this).index();
-
-                    let marginLeft = -index * 100;
-                    slider.css('margin-left', `${marginLeft}%`);
-                    $(this).addClass('active').siblings().removeClass('active');
+                    // let index = $(this).index();
+                    //
+                    // let marginLeft = -index * 100;
+                    // slider.css('margin-left', `${marginLeft}%`);
+                    // $(this).addClass('active').siblings().removeClass('active');
                 });
 
                 $('.movies_slider').each(function(index, element) {
@@ -1014,18 +1014,18 @@
 
                     $(element).find('.prev_btn').click(function() {
                         alert('Prev slider button was clicked!')
-                        if (marginLeft === 0) return;
-
-                        marginLeft += 100;
-                        sliderContent.css('margin-left', `${marginLeft}%`);
+                        // if (marginLeft === 0) return;
+                        //
+                        // marginLeft += 100;
+                        // sliderContent.css('margin-left', `${marginLeft}%`);
                     });
 
                     $(element).find('.next_btn').click(function() {
                         alert('Next slider button was clicked!')
-                        if (marginLeft === -(sliderMaxMovesCount * 100)) return;
-
-                        marginLeft -= 100;
-                        sliderContent.css('margin-left', `${marginLeft}%`);
+                        // if (marginLeft === -(sliderMaxMovesCount * 100)) return;
+                        //
+                        // marginLeft -= 100;
+                        // sliderContent.css('margin-left', `${marginLeft}%`);
                     });
 
                 });
