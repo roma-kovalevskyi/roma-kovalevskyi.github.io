@@ -991,6 +991,44 @@
                 $('.test-btn').click(function () {
                     alert('Button was clicked!');
                 });
+
+                let sliderPerRow = 5;
+                let slider = $('.main-slider__inner');
+
+                $('.main-slider__pagination-item').click(function() {
+                    alert('Pagination main slider was clicked!')
+                    let index = $(this).index();
+
+                    let marginLeft = -index * 100;
+                    slider.css('margin-left', `${marginLeft}%`);
+                    $(this).addClass('active').siblings().removeClass('active');
+                });
+
+                $('.movies_slider').each(function(index, element) {
+                    let marginLeft = 0;
+                    let sliderContent = $(element).find('.slider-content');
+
+                    let sliderItems = sliderContent.children();
+                    let sliderItemsCount = sliderItems.length;
+                    let sliderMaxMovesCount = sliderItemsCount / sliderPerRow - 1;
+
+                    $(element).find('.prev_btn').click(function() {
+                        alert('Prev slider button was clicked!')
+                        if (marginLeft === 0) return;
+
+                        marginLeft += 100;
+                        sliderContent.css('margin-left', `${marginLeft}%`);
+                    });
+
+                    $(element).find('.next_btn').click(function() {
+                        alert('Next slider button was clicked!')
+                        if (marginLeft === -(sliderMaxMovesCount * 100)) return;
+
+                        marginLeft -= 100;
+                        sliderContent.css('margin-left', `${marginLeft}%`);
+                    });
+
+                });
             });
         </script>
     </body>
