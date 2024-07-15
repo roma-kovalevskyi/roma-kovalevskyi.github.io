@@ -337,7 +337,7 @@
 
 .slider-btn {
     display: inline-block;
-    background: #07080899;
+    background: rgba(7, 8, 8, 0.6);
     border-radius: 7px;
     color: #ffffff;
     cursor: pointer;
@@ -359,7 +359,6 @@
 
 .prev_btn {
     left: -5px;
-    rotate: 180deg;
 }
 
 .next_btn {

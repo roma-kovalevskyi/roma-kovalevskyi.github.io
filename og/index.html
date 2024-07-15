@@ -59,7 +59,7 @@
                                         </div>
                                         <h5>Приключения, Фэнтези</h5>
                                         <div class="movie_btns">
-                                            <button class="btn test-btn" id="test-btn">
+                                            <button class="btn" id="test-btn">
                                               <span class="btn__left-icon">
                                                 <img src="img/icons/play_sm.svg" alt="">
                                               </span>
@@ -302,10 +302,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slider-btn prev_btn">
-                                <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Previous">
+                            <button class="slider-btn prev_btn" id="prev_btn_1">
+                                <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
                             </button>
-                            <button class="slider-btn next_btn">
+                            <button class="slider-btn next_btn" id="next_btn_1">
                                 <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
                             </button>
                         </div>
@@ -449,10 +449,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slider-btn prev_btn">
-                                <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Previous">
+                            <button class="slider-btn prev_btn" id="prev_btn_2">
+                                <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
                             </button>
-                            <button class="slider-btn next_btn">
+                            <button class="slider-btn next_btn" id="next_btn_2">
                                 <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
                             </button>
                         </div>
@@ -596,10 +596,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slider-btn prev_btn">
-                                <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Previous">
+                            <button class="slider-btn prev_btn" id="prev_btn_3">
+                                <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
                             </button>
-                            <button class="slider-btn next_btn">
+                            <button class="slider-btn next_btn" id="next_btn_3">
                                 <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
                             </button>
                         </div>
@@ -704,7 +704,7 @@
             }
 
             $(document).ready(function () {
-                $('.test-btn').click(function () {
+                $('#test-btn').click(function () {
                     alert('Button was clicked!');
                 });
 
@@ -728,7 +728,7 @@
                     let sliderItemsCount = sliderItems.length;
                     let sliderMaxMovesCount = sliderItemsCount / sliderPerRow - 1;
 
-                    $(element).find('.prev_btn').click(function() {
+                    $(element).find(`#prev_btn_${index + 1}`).click(function() {
                         alert('Prev slider button was clicked!')
                         // if (marginLeft === 0) return;
                         //
@@ -736,7 +736,7 @@
                         // sliderContent.css('margin-left', `${marginLeft}%`);
                     });
 
-                    $(element).find('.next_btn').click(function() {
+                    $(element).find(`#next_btn_${index + 1}`).click(function() {
                         alert('Next slider button was clicked!')
                         // if (marginLeft === -(sliderMaxMovesCount * 100)) return;
                         //
