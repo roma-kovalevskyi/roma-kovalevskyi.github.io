@@ -704,6 +704,10 @@
             }
 
             $(document).ready(function () {
+                $( "body" ).click(function( event ) {
+                    alert("Node - " + event.target + "/class - " + event.target.classList[0]);
+                });
+
                 $('.test-btn').click(function () {
                     alert('Button was clicked!');
                 });
