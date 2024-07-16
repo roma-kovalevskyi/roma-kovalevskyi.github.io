@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .header__nav-link {
+            font-size: 24px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+        .slider {
+            font-size: 0;
+            margin: 0 auto;
+        }
+
+        .slider__item {
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px solid black;
+            padding: 30px;
+            width: 200px;
+            height: 100px;
+            margin-left: 30px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .slider-controls {
+            margin-top: 50px;
+        }
+
+        .slider-controls__prev,
+        .slider-controls__next {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 24px;
+        }
+
+        .slider-controls__next {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="header__nav-link" onclick="alert('Hello world!')">Мой кабинет</button>
+    <div class="slider-wrapper">
+        <div class="slider">
+            <div class="slider__item">Slider item 1</div>
+            <div class="slider__item">Slider item 2</div>
+            <div class="slider__item">Slider item 3</div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-controls__prev">Prev</button>
+            <button class="slider-controls__next">Next</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.slider-controls__prev').addEventListener('click', function() {
+            alert('Prev button clicked');
+        });
+
+        document.querySelector('.slider-controls__next').addEventListener('click', function() {
+            alert('Next button clicked');
+        });
+    </script>
+</body>
+</html>
