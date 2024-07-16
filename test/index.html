@@ -7,752 +7,761 @@
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>OG test</title>
+    <title>OG Slick</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .main-slider .slick-dots{
+            bottom: 0;
+        }
+        .main-slider .slick-dots{
+            max-width: max-content;
+            right: 0;
+        }
 
+        .main-slider .slick-dots li button{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #f3f4f6;
+        }
+
+        .main-slider .slick-dots .slick-active button{
+            background-color: #22c55e;
+        }
+
+        .main-slider__pagination{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <nav class="header__nav">
-                    <a class="header__nav-link active" href="/og">Главная</a>
-                    <a class="header__nav-link" href="catalog.html">Каталог</a>
-                    <a class="header__nav-link header__logo" href="about.html">
-                        <img src="img/logo_og.png" alt="Logo">
-                    </a>
-                    <a class="header__nav-link" href="my-lists.html">Мои списки</a>
-                    <a class="header__nav-link" href="profile.html">Мой кабинет</a>
-                </nav>
-            </div>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <nav class="header__nav">
+                <a class="header__nav-link active" href="/og">Главная</a>
+                <a class="header__nav-link" href="catalog.html">Каталог</a>
+                <a class="header__nav-link header__logo" href="about.html">
+                    <img src="img/logo_og.png" alt="Logo">
+                </a>
+                <a class="header__nav-link" href="my-lists.html">Мои списки</a>
+                <a class="header__nav-link" href="profile.html">Мой кабинет</a>
+            </nav>
         </div>
-    </header>
-    <div class="search">
-        <div class="container">
-            <div class="search__inner">
-                <div class="search__input-box">
+    </div>
+</header>
+<div class="search">
+    <div class="container">
+        <div class="search__inner">
+            <div class="search__input-box">
                             <span class="input-left-icon">
                               <img src="img/icons/search.svg" alt="">
                             </span>
-                    <input id="input" autocomplete="off" class="search__input" maxlength="100" type="text" placeholder="Введите название или ключевое слово">
+                <input id="input" autocomplete="off" class="search__input" maxlength="100" type="text" placeholder="Введите название или ключевое слово">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container">
+        <div class="content__inner">
+            <div class="content__slider">
+                <div class="main-slider">
+                    <!-- slider -->
+                    <div class="main-slider__inner">
+                        <!-- item -->
+                        <div class="main-slider__item">
+                            <img src="img/main-slider/main_slider_img_1.png" class="main-slider__item-img" alt="Slider">
+                            <div class="main_info">
+                                <h1 class="main_info__title">Дом дракона</h1>
+                                <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
+                                <div class="tags main_tags">
+                                    <div class="tag">2022</div>
+                                    <div class="tag">148 мин.</div>
+                                </div>
+                                <h5>Приключения, Фэнтези</h5>
+                                <div class="movie_btns">
+                                    <button class="btn test-btn">
+                                                  <span class="btn__left-icon">
+                                                    <img src="img/icons/play_sm.svg" alt="">
+                                                  </span>
+                                        Смотреть
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <!-- item -->
+                        <div class="main-slider__item">
+                            <img src="img/main-slider/main_slider_img_2.jpeg" class="main-slider__item-img" alt="Slider">
+                            <div class="main_info">
+                                <h1 class="main_info__title">Дом дракона</h1>
+                                <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
+                                <div class="tags main_tags">
+                                    <div class="tag">2022</div>
+                                    <div class="tag">148 мин.</div>
+                                </div>
+                                <h5>Приключения, Фэнтези</h5>
+                                <div class="movie_btns">
+                                    <a href="/og/film" class="btn">
+                                                  <span class="btn__left-icon">
+                                                    <img src="img/icons/play_sm.svg" alt="">
+                                                  </span>
+                                        Смотреть
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <!-- item -->
+                        <div class="main-slider__item">
+                            <img src="img/main-slider/main_slider_img_3.png" class="main-slider__item-img" alt="Slider">
+                            <div class="main_info">
+                                <h1 class="main_info__title">Дом дракона</h1>
+                                <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
+                                <div class="tags main_tags">
+                                    <div class="tag">2022</div>
+                                    <div class="tag">148 мин.</div>
+                                </div>
+                                <h5>Приключения, Фэнтези</h5>
+                                <div class="movie_btns">
+                                    <a href="/og/film" class="btn">
+                                                  <span class="btn__left-icon">
+                                                    <img src="img/icons/play_sm.svg" alt="">
+                                                  </span>
+                                        Смотреть
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <!-- item -->
+                        <div class="main-slider__item">
+                            <img src="img/main-slider/main_slider_img_4.jpeg" class="main-slider__item-img" alt="Slider">
+                            <div class="main_info">
+                                <h1 class="main_info__title">Дом дракона</h1>
+                                <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
+                                <div class="tags main_tags">
+                                    <div class="tag">2022</div>
+                                    <div class="tag">148 мин.</div>
+                                </div>
+                                <h5>Приключения, Фэнтези</h5>
+                                <div class="movie_btns">
+                                    <a href="/og/film" class="btn">
+                                                  <span class="btn__left-icon">
+                                                    <img src="img/icons/play_sm.svg" alt="">
+                                                  </span>
+                                        Смотреть
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <!-- item -->
+                        <div class="main-slider__item">
+                            <img src="img/main-slider/main_slider_img_5.jpeg" class="main-slider__item-img" alt="Slider">
+                            <div class="main_info">
+                                <h1 class="main_info__title">Дом дракона</h1>
+                                <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
+                                <div class="tags main_tags">
+                                    <div class="tag">2022</div>
+                                    <div class="tag">148 мин.</div>
+                                </div>
+                                <h5>Приключения, Фэнтези</h5>
+                                <div class="movie_btns">
+                                    <a href="/og/film" class="btn">
+                                                  <span class="btn__left-icon">
+                                                    <img src="img/icons/play_sm.svg" alt="">
+                                                  </span>
+                                        Смотреть
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                    </div>
+                    <!-- slider -->
+                </div>
+            </div>
+            <div class="main-slider__pagination">
+                <span class="main-slider__pagination-item active"></span>
+                <span class="main-slider__pagination-item"></span>
+                <span class="main-slider__pagination-item"></span>
+                <span class="main-slider__pagination-item"></span>
+                <span class="main-slider__pagination-item"></span>
+            </div>
+            <div class="content__title">
+                <h1 class="main_text-main">Смотреть Онлайн Фильмы и Сериалы - Бесплатно Киноточка</h1>
+            </div>
+            <div class="content__categories-box">
+                <div class="movie_slider_box">
+                    <div class="movies_slider">
+                        <h3 class="movies_title">Топ-10 недели</h3>
+                        <div class="slider-wrapper">
+                            <div class="slider-container">
+                                <div class="slider-content">
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_1.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_2.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_3.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_4.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_5.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_6.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_7.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_8.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_9.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_10.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn prev_btn" id="prev_btn_1">
+                        <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
+                    </button>
+                    <button class="slider-btn next_btn" id="next_btn_1">
+                        <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
+                    </button>
+                </div>
+                <div class="movie_slider_box">
+                    <div class="movies_slider">
+                        <h3 class="movies_title">Семейный вечер</h3>
+                        <div class="slider-wrapper">
+                            <div class="slider-container">
+                                <div class="slider-content">
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_1.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_2.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_3.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_4.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_5.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_6.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_7.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_8.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_9.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_10.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn prev_btn" id="prev_btn_2">
+                        <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
+                    </button>
+                    <button class="slider-btn next_btn" id="next_btn_2">
+                        <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
+                    </button>
+                </div>
+                <div class="movie_slider_box">
+                    <div class="movies_slider">
+                        <h3 class="movies_title">Лучший экшен</h3>
+                        <div class="slider-wrapper">
+                            <div class="slider-container">
+                                <div class="slider-content">
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_1.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_2.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_3.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_4.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_5.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_6.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_7.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_8.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_9.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                    <a href="/og/film" class="slide">
+                                        <div class="slide__img-box">
+                                            <img
+                                                    src="img/carousel/carousel_img_10.jpeg"
+                                                    width="220"
+                                                    height="330"
+                                                    alt="Охотники за привидениями: Леденящий ужас 2024"
+                                                    title="Охотники за привидениями: Леденящий ужас"
+                                                    class="slide__img"
+                                            >
+                                        </div>
+                                        <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn prev_btn" id="prev_btn_3">
+                        <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
+                    </button>
+                    <button class="slider-btn next_btn" id="next_btn_3">
+                        <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content">
-        <div class="container">
-            <div class="content__inner">
-                <div class="content__slider">
-                    <div class="main-slider">
-                        <div class="main-slider__inner">
-                            <div class="main-slider__item">
-                                <img src="img/main-slider/main_slider_img_1.png" class="main-slider__item-img" alt="Slider">
-                                <div class="main_info">
-                                    <h1 class="main_info__title">Дом дракона</h1>
-                                    <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
-                                    <div class="tags main_tags">
-                                        <div class="tag">2022</div>
-                                        <div class="tag">148 мин.</div>
-                                    </div>
-                                    <h5>Приключения, Фэнтези</h5>
-                                    <div class="movie_btns">
-                                        <button class="btn test-btn">
-                                                  <span class="btn__left-icon">
-                                                    <img src="img/icons/play_sm.svg" alt="">
-                                                  </span>
-                                            Смотреть
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-slider__item">
-                                <img src="img/main-slider/main_slider_img_2.jpeg" class="main-slider__item-img" alt="Slider">
-                                <div class="main_info">
-                                    <h1 class="main_info__title">Дом дракона</h1>
-                                    <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
-                                    <div class="tags main_tags">
-                                        <div class="tag">2022</div>
-                                        <div class="tag">148 мин.</div>
-                                    </div>
-                                    <h5>Приключения, Фэнтези</h5>
-                                    <div class="movie_btns">
-                                        <a href="/og/film" class="btn">
-                                                  <span class="btn__left-icon">
-                                                    <img src="img/icons/play_sm.svg" alt="">
-                                                  </span>
-                                            Смотреть
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-slider__item">
-                                <img src="img/main-slider/main_slider_img_3.png" class="main-slider__item-img" alt="Slider">
-                                <div class="main_info">
-                                    <h1 class="main_info__title">Дом дракона</h1>
-                                    <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
-                                    <div class="tags main_tags">
-                                        <div class="tag">2022</div>
-                                        <div class="tag">148 мин.</div>
-                                    </div>
-                                    <h5>Приключения, Фэнтези</h5>
-                                    <div class="movie_btns">
-                                        <a href="/og/film" class="btn">
-                                                  <span class="btn__left-icon">
-                                                    <img src="img/icons/play_sm.svg" alt="">
-                                                  </span>
-                                            Смотреть
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-slider__item">
-                                <img src="img/main-slider/main_slider_img_4.jpeg" class="main-slider__item-img" alt="Slider">
-                                <div class="main_info">
-                                    <h1 class="main_info__title">Дом дракона</h1>
-                                    <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
-                                    <div class="tags main_tags">
-                                        <div class="tag">2022</div>
-                                        <div class="tag">148 мин.</div>
-                                    </div>
-                                    <h5>Приключения, Фэнтези</h5>
-                                    <div class="movie_btns">
-                                        <a href="/og/film" class="btn">
-                                                  <span class="btn__left-icon">
-                                                    <img src="img/icons/play_sm.svg" alt="">
-                                                  </span>
-                                            Смотреть
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-slider__item">
-                                <img src="img/main-slider/main_slider_img_5.jpeg" class="main-slider__item-img" alt="Slider">
-                                <div class="main_info">
-                                    <h1 class="main_info__title">Дом дракона</h1>
-                                    <h2 class="main_info__mini-title">Дом дракона (2022)</h2>
-                                    <div class="tags main_tags">
-                                        <div class="tag">2022</div>
-                                        <div class="tag">148 мин.</div>
-                                    </div>
-                                    <h5>Приключения, Фэнтези</h5>
-                                    <div class="movie_btns">
-                                        <a href="/og/film" class="btn">
-                                                  <span class="btn__left-icon">
-                                                    <img src="img/icons/play_sm.svg" alt="">
-                                                  </span>
-                                            Смотреть
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__top">
+                <div class="footer__left">
+                    <div class="footer_logo">
+                        <img src="img/footer_logo.png" width="422" height="248" alt="OG Movie">
                     </div>
+                    <div class="footer__left-content">Почувствуйте магию фильмов в формате HD - OG.MOVIE, ваш билет к качественному онлайн-просмотру!</div>
                 </div>
-                <div class="main-slider__pagination">
-                    <span class="main-slider__pagination-item active"></span>
-                    <span class="main-slider__pagination-item"></span>
-                    <span class="main-slider__pagination-item"></span>
-                    <span class="main-slider__pagination-item"></span>
-                    <span class="main-slider__pagination-item"></span>
-                </div>
-                <div class="content__title">
-                    <h1 class="main_text-main">Смотреть Онлайн Фильмы и Сериалы - Бесплатно Киноточка</h1>
-                </div>
-                <div class="content__categories-box">
-                    <div class="movie_slider_box">
-                        <div class="movies_slider">
-                            <h3 class="movies_title">Топ-10 недели</h3>
-                            <div class="slider-wrapper">
-                                <div class="slider-container">
-                                    <div class="slider-content">
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_1.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_2.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_3.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_4.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_5.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_6.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_7.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_8.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_9.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_10.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                    </div>
-                                </div>
+                <div class="footer__right">
+                    <div class="footer__right-item">
+                        <h4 class="footer__right-title">Меню</h4>
+                        <h3 class="footer__right-subtitle">
+                            <a aria-current="page" href="/og" class="router-link-active router-link-exact-active">Главная</a>
+                        </h3>
+                        <div>
+                            <h3 class="footer__right-subtitle">
+                                <a href="/catalog">Каталог</a>
+                            </h3>
+                            <div class="footer__right-subtitle--subitems">
+                                <a href="/catalog/film">Фильмы</a>
+                            </div>
+                            <div class="footer__right-subtitle--subitems">
+                                <a href="/catalog/series">Сериалы</a>
+                            </div>
+                            <div class="footer__right-subtitle--subitems">
+                                <a href="/catalog/tv-show">Телешоу</a>
+                            </div>
+                            <div class="footer__right-subtitle--subitems">
+                                <a href="/catalog/cartoon">Мультфильмы</a>
+                            </div>
+                            <div class="footer__right-subtitle--subitems">
+                                <a href="/catalog/cartoon-series">Мультсериалы</a>
+                            </div>
+                            <div class="footer__right-subtitle--subitems">
+                                <a href="/catalog/anime-film">Аниме</a>
+                            </div>
+                            <div class="footer__right-subtitle--subitems">
+                                <a href="/catalog/anime-series">Аниме-сериалы</a>
                             </div>
                         </div>
-                        <button class="slider-btn prev_btn" id="prev_btn_1">
-                            <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
-                        </button>
-                        <button class="slider-btn next_btn" id="next_btn_1">
-                            <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
-                        </button>
+                        <!---->
+                        <h3 class="footer__right-subtitle">
+                            <a>Мои списки</a>
+                        </h3>
+                        <!---->
+                        <h3 class="footer__right-subtitle">Поиск</h3>
                     </div>
-                    <div class="movie_slider_box">
-                        <div class="movies_slider">
-                            <h3 class="movies_title">Семейный вечер</h3>
-                            <div class="slider-wrapper">
-                                <div class="slider-container">
-                                    <div class="slider-content">
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_1.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_2.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_3.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_4.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_5.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_6.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_7.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_8.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_9.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_10.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slider-btn prev_btn" id="prev_btn_2">
-                            <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
-                        </button>
-                        <button class="slider-btn next_btn" id="next_btn_2">
-                            <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
-                        </button>
-                    </div>
-                    <div class="movie_slider_box">
-                        <div class="movies_slider">
-                            <h3 class="movies_title">Лучший экшен</h3>
-                            <div class="slider-wrapper">
-                                <div class="slider-container">
-                                    <div class="slider-content">
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_1.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_2.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_3.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_4.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_5.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_6.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_7.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_8.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_9.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                        <a href="/og/film" class="slide">
-                                            <div class="slide__img-box">
-                                                <img
-                                                        src="img/carousel/carousel_img_10.jpeg"
-                                                        width="220"
-                                                        height="330"
-                                                        alt="Охотники за привидениями: Леденящий ужас 2024"
-                                                        title="Охотники за привидениями: Леденящий ужас"
-                                                        class="slide__img"
-                                                >
-                                            </div>
-                                            <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slider-btn prev_btn" id="prev_btn_3">
-                            <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
-                        </button>
-                        <button class="slider-btn next_btn" id="next_btn_3">
-                            <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
-                        </button>
+                    <div class="footer__right-item">
+                        <h4 class="footer__right-title">Мой аккаунт</h4>
+                        <h3 class="footer__right-subtitle">
+                            <a aria-current="page" href="/" class="router-link-active router-link-exact-active">Язык</a>
+                        </h3>
+                        <!---->
+                        <h3 class="footer__right-subtitle">
+                            <a>Поддержка</a>
+                        </h3>
+                        <!---->
+                        <h3 class="footer__right-subtitle">FAQ</h3>
                     </div>
                 </div>
             </div>
+            <div class="footer__bottom">
+                <div class="footer__bottom-left"> © 2024 OG.Movie Все права защищены</div>
+                <ul class="footer__bottom-right">
+                    <li>
+                        <a href="/advertisers" class="footer__bottom-link">Рекламодателям</a>
+                    </li>
+                    <li>
+                        <a href="/right-holders" class="footer__bottom-link">Правообладателям</a>
+                    </li>
+                    <li>
+                        <a href="/policy" class="footer__bottom-link">Политика конфиденциальности</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__top">
-                    <div class="footer__left">
-                        <div class="footer_logo">
-                            <img src="img/footer_logo.png" width="422" height="248" alt="OG Movie">
-                        </div>
-                        <div class="footer__left-content">Почувствуйте магию фильмов в формате HD - OG.MOVIE, ваш билет к качественному онлайн-просмотру!</div>
-                    </div>
-                    <div class="footer__right">
-                        <div class="footer__right-item">
-                            <h4 class="footer__right-title">Меню</h4>
-                            <h3 class="footer__right-subtitle">
-                                <a aria-current="page" href="/og" class="router-link-active router-link-exact-active">Главная</a>
-                            </h3>
-                            <div>
-                                <h3 class="footer__right-subtitle">
-                                    <a href="/catalog">Каталог</a>
-                                </h3>
-                                <div class="footer__right-subtitle--subitems">
-                                    <a href="/catalog/film">Фильмы</a>
-                                </div>
-                                <div class="footer__right-subtitle--subitems">
-                                    <a href="/catalog/series">Сериалы</a>
-                                </div>
-                                <div class="footer__right-subtitle--subitems">
-                                    <a href="/catalog/tv-show">Телешоу</a>
-                                </div>
-                                <div class="footer__right-subtitle--subitems">
-                                    <a href="/catalog/cartoon">Мультфильмы</a>
-                                </div>
-                                <div class="footer__right-subtitle--subitems">
-                                    <a href="/catalog/cartoon-series">Мультсериалы</a>
-                                </div>
-                                <div class="footer__right-subtitle--subitems">
-                                    <a href="/catalog/anime-film">Аниме</a>
-                                </div>
-                                <div class="footer__right-subtitle--subitems">
-                                    <a href="/catalog/anime-series">Аниме-сериалы</a>
-                                </div>
-                            </div>
-                            <!---->
-                            <h3 class="footer__right-subtitle">
-                                <a>Мои списки</a>
-                            </h3>
-                            <!---->
-                            <h3 class="footer__right-subtitle">Поиск</h3>
-                        </div>
-                        <div class="footer__right-item">
-                            <h4 class="footer__right-title">Мой аккаунт</h4>
-                            <h3 class="footer__right-subtitle">
-                                <a aria-current="page" href="/" class="router-link-active router-link-exact-active">Язык</a>
-                            </h3>
-                            <!---->
-                            <h3 class="footer__right-subtitle">
-                                <a>Поддержка</a>
-                            </h3>
-                            <!---->
-                            <h3 class="footer__right-subtitle">FAQ</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__bottom">
-                    <div class="footer__bottom-left"> © 2024 OG.Movie Все права защищены</div>
-                    <ul class="footer__bottom-right">
-                        <li>
-                            <a href="/advertisers" class="footer__bottom-link">Рекламодателям</a>
-                        </li>
-                        <li>
-                            <a href="/right-holders" class="footer__bottom-link">Правообладателям</a>
-                        </li>
-                        <li>
-                            <a href="/policy" class="footer__bottom-link">Политика конфиденциальности</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-
-    <script src="./js/test.js"></script>
-    <script>
-        alert('Alert before Jquery!!!');
-    </script>
-    <script src="./js/jquery.js"></script>
-    <script>
-        alert('Alert after Jquery!!!');
-    </script>
-    <script>
-        alert('Inside script after Jquery!!!')
-
-        if (typeof jQuery !== 'undefined') {
-            alert('jQuery is loaded');
-        } else {
-            alert('jQuery is not loaded');
-        }
-
-        $(document).ready(function () {
-            // $( "body" ).click(function( event ) {
-            //     alert("Node - " + event.target + "/class - " + event.target.classList[0]);
-            // });
-
-            $('.test-btn').click(function () {
-                alert('Button was clicked!');
-            });
-
-            // let sliderPerRow = 5;
-            // let slider = $('.main-slider__inner');
-            //
-            // $('.main-slider__pagination-item').click(function() {
-            //     alert('Pagination main slider was clicked!')
-            //     // let index = $(this).index();
-            //     //
-            //     // let marginLeft = -index * 100;
-            //     // slider.css('margin-left', `${marginLeft}%`);
-            //     // $(this).addClass('active').siblings().removeClass('active');
-            // });
-            //
-            // $('.movie_slider_box').each(function(index, element) {
-            //     let marginLeft = 0;
-            //     let sliderContent = $(element).find('.slider-content');
-            //
-            //     let sliderItems = sliderContent.children();
-            //     let sliderItemsCount = sliderItems.length;
-            //     let sliderMaxMovesCount = sliderItemsCount / sliderPerRow - 1;
-            //
-            //     $(element).find(`#prev_btn_${index + 1}`).click(function() {
-            //         alert('Prev slider button was clicked!')
-            //         // if (marginLeft === 0) return;
-            //         //
-            //         // marginLeft += 100;
-            //         // sliderContent.css('margin-left', `${marginLeft}%`);
-            //     });
-            //
-            //     $(element).find(`#next_btn_${index + 1}`).click(function() {
-            //         alert('Next slider button was clicked!')
-            //         // if (marginLeft === -(sliderMaxMovesCount * 100)) return;
-            //         //
-            //         // marginLeft -= 100;
-            //         // sliderContent.css('margin-left', `${marginLeft}%`);
-            //     });
-            //
-            // });
+</footer>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        console.log('ready');
+        $(".main-slider__inner").slick({
+            dots: true,
+            infinite: true,
+            // slidesToShow: 3,
+            // slidesToScroll: 1,
+            // responsive: [
+            //     {
+            //         breakpoint: 1440,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             slidesToScroll: 1,
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 1024,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             slidesToScroll: 1
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 767,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1
+            //         }
+            //     }
+            // ]
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
