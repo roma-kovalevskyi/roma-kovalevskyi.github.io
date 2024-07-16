@@ -37,6 +37,28 @@
         .main-slider__pagination{
             display: none;
         }
+
+        .slider-content{
+            padding-bottom: 50px;
+        }
+
+        .slider-content .slick-next,
+        .slider-content .slick-prev{
+            width: 40px;
+            height: 40px;
+            background: rgba(7, 8, 8, 0.6);
+            bottom: -35px;
+            top: auto;
+            z-index: 100;
+        }
+
+        .slider-content .slick-prev{
+            left: 0;
+        }
+
+        .slider-content .slick-next{
+            left: 60px;
+        }
     </style>
 </head>
 <body>
@@ -204,7 +226,9 @@
                         <h3 class="movies_title">Топ-10 недели</h3>
                         <div class="slider-wrapper">
                             <div class="slider-container">
-                                <div class="slider-content">
+                                <!-- slider 1 -->
+                                <div class="slider-content slider-content-1">
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -218,6 +242,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -231,6 +257,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -244,6 +272,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -257,6 +287,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -270,6 +302,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -283,6 +317,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -296,6 +332,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -309,6 +347,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -322,6 +362,8 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
+                                    <!-- slide -->
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -335,23 +377,19 @@
                                         </div>
                                         <h5 class="slide__title">Охотники за привидениями: Леденя... (2024) </h5>
                                     </a>
+                                    <!-- slide -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="slider-btn prev_btn" id="prev_btn_1">
-                        <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
-                    </button>
-                    <button class="slider-btn next_btn" id="next_btn_1">
-                        <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
-                    </button>
                 </div>
                 <div class="movie_slider_box">
                     <div class="movies_slider">
                         <h3 class="movies_title">Семейный вечер</h3>
                         <div class="slider-wrapper">
                             <div class="slider-container">
-                                <div class="slider-content">
+                                <!-- slider 2 -->
+                                <div class="slider-content slider-content-2">
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -486,19 +524,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="slider-btn prev_btn" id="prev_btn_2">
-                        <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
-                    </button>
-                    <button class="slider-btn next_btn" id="next_btn_2">
-                        <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
-                    </button>
                 </div>
                 <div class="movie_slider_box">
                     <div class="movies_slider">
                         <h3 class="movies_title">Лучший экшен</h3>
                         <div class="slider-wrapper">
                             <div class="slider-container">
-                                <div class="slider-content">
+                                <div class="slider-content slider-content-3">
                                     <a href="/og/film" class="slide">
                                         <div class="slide__img-box">
                                             <img
@@ -633,12 +665,6 @@
                             </div>
                         </div>
                     </div>
-                    <button class="slider-btn prev_btn" id="prev_btn_3">
-                        <img src="img/icons/prev_arrow_slider.png" class="next_arrow" alt="Previous">
-                    </button>
-                    <button class="slider-btn next_btn" id="next_btn_3">
-                        <img src="img/icons/next_arrow_slider.png" class="next_arrow" alt="Next">
-                    </button>
                 </div>
             </div>
         </div>
@@ -730,11 +756,27 @@
 <script type="text/javascript" src="js/slick.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        console.log('ready');
         $(".main-slider__inner").slick({
             dots: true,
             infinite: true,
-            // slidesToShow: 3,
+        });
+
+        $(".slider-content-1").slick({
+            dots: false,
+            infinite: true,
+            slidesToShow: 5,
+        });
+
+        $(".slider-content-2").slick({
+            dots: false,
+            infinite: true,
+            slidesToShow: 5,
+        });
+
+        $(".slider-content-3").slick({
+            dots: false,
+            infinite: true,
+            slidesToShow: 5,
             // slidesToScroll: 1,
             // responsive: [
             //     {
@@ -760,6 +802,7 @@
             //     }
             // ]
         });
+
     });
 </script>
 
