@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <nav class="header__nav">
+                    <a class="header__nav-link active" href="/og">Главная</a>
+                    <a class="header__nav-link" href="catalog.html">Каталог</a>
+                    <a class="header__nav-link header__logo" href="/og">
+                        <img src="../img/logo_og.png" alt="Logo">
+                    </a>
+                    <a class="header__nav-link" href="my-lists.html">Мои списки</a>
+                    <a class="header__nav-link" href="profile.html">Мой кабинет</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="search">
+        <div class="container">
+            <div class="search__inner">
+                <div class="search__input-box">
+                    <span class="input-left-icon">
+                      <img src="../img/icons/search.svg" alt="">
+                    </span>
+                    <input id="input" autocomplete="off" class="search__input" maxlength="100" type="text" placeholder="Введите название или ключевое слово">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="film-content">
+        <div class="container">
+            <div class="film-content__inner">
+                <div class="film-content__breadcrumbs">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs__item">
+                            <a href="/og">Главная</a>
+                        </div>
+                        <div class="breadcrumbs__item">
+                            <a href="/catalog">Каталог</a>
+                        </div>
+                        <div class="breadcrumbs__item">
+                            <a href="/catalog/film">Фильмы</a>
+                        </div>
+                        <div class="breadcrumbs__item">
+                            <a>Боб Марли: Одна любовь</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-content__main">
+                    <div class="view-main">
+                        <div class="view-main__image">
+                            <img src="../img/movie_poster.jpg"
+                                 width="350"
+                                 height="500"
+                                 alt="Боб Марли: Одна любовь 2024"
+                                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 210px, 400px"
+                                 title="Боб Марли: Одна любовь"
+                            >
+                        </div>
+                        <div class="view-main__details">
+                            <div class="view-main__rating">
+                                <img fit="contain" src="../img/imdb.png">
+                                <p>6.4</p>
+                            </div>
+                            <h1 class="view-main__title">Боб Марли: Одна любовь (2024) </h1>
+                            <h4 class="view-main__subtitle">bob marli odna liubov (2024) </h4>
+                            <div class="view-main__tags">
+                                <div class="tags">
+                                    <div class="tag">2024</div>
+                                    <div class="tag">104 мин.</div>
+                                </div>
+                            </div>
+                            <div class="view-main__categories">
+                                <div class="view-main__category">Музыка</div>
+                                <div class="view-main__category">Драма</div>
+                                <div class="view-main__category">Биографический</div>
+                            </div>
+                            <div class="view-main__controls">
+                                <button class="btn large" style="min-width:10rem;">
+                                      <span class="btn__left-icon">
+                                        <img src="../img/icons/play_sm.svg" alt="">
+                                      </span>
+                                    Смотреть
+                                </button>
+                                <button class="btn large transparent_white square">
+                                    <span class="button-square__icon">
+                                        <img src="../img/icons/like.svg" alt="">
+                                    </span>
+                                </button>
+                                <button class="btn large transparent_white square">
+                                    <span class="button-square__icon">
+                                        <img src="../img/icons/share.svg" alt="">
+                                    </span>
+                                </button>
+<!--                                <div class="controls__sqare_mobile">-->
+<!--                                    <div class="open_controls_btn">-->
+<!--                                        <button class="btn large transparent_white">-->
+<!--                                            <span class="nuxt-icon nuxt-icon&#45;&#45;fill button-square__icon">-->
+<!--                                              <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                                <path d="M1.99967 0.5C1.08301 0.5 0.333008 1.25 0.333008 2.16667C0.333008 3.08333 1.08301 3.83333 1.99967 3.83333C2.91634 3.83333 3.66634 3.08333 3.66634 2.16667C3.66634 1.25 2.91634 0.5 1.99967 0.5ZM1.99967 12.1667C1.08301 12.1667 0.333008 12.9167 0.333008 13.8333C0.333008 14.75 1.08301 15.5 1.99967 15.5C2.91634 15.5 3.66634 14.75 3.66634 13.8333C3.66634 12.9167 2.91634 12.1667 1.99967 12.1667ZM1.99967 6.33333C1.08301 6.33333 0.333008 7.08333 0.333008 8C0.333008 8.91667 1.08301 9.66667 1.99967 9.66667C2.91634 9.66667 3.66634 8.91667 3.66634 8C3.66634 7.08333 2.91634 6.33333 1.99967 6.33333Z" fill="white"></path>-->
+<!--                                              </svg>-->
+<!--                                            </span>-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-main__description">
+                        <h3 class="view-main__description-title">Актеры</h3>
+                        <p class="view-main__description-text opened">Кингсли Бен-Адир, Лашана Линч, Джеймс Нортон, Майкл Гандольфини, Сэм Палладио, Майкл Уорд, Энтони Уэльс, Тосин Коул, Надин Маршалл, Сундра Оукли</p>
+                    </div>
+                    <div class="view-main__more">
+                        <p>Скрыть</p>
+                        <img src="../img/icons/arrow_down.svg" alt="">
+                    </div>
+                    <h2 class="page_watch_text">Смотреть Боб Марли: Одна любовь (2024) Онлайн</h2>
+                    <div id="targetPlayer" class="view-player">
+                        <div class="iframe-container">
+<!--                            <h1>Video Iframe</h1>-->
+                            <iframe
+                                id="iframe_player"
+                                name="iframe_player"
+                                src="https://api.lessornot.ws/embed/movie/250"
+                                allow="autoplay *; fullscreen *"
+                                frameborder="0"
+                                allowfullscreen=""
+                                webkitallowfullscreen="true"
+                                mozallowfullscreen="true"
+                                oallowfullscreen="true"
+                                msallowfullscreen="true"
+                            ></iframe>
+                        </div>
+                    </div>
+                    <div class="problem_request">
+                        <div class="problem_request__title">Возникли проблемы?</div>
+                        <div class="problem_request__button">Сообщите нам</div>
+                    </div>
+                    <div class="feedback" id="feedback">
+                        <h2 class="feedback__title">Отзывы</h2>
+                        <div class="feedback_editor">
+                            <div id="my-toolbar" class="ql-toolbar ql-snow">
+                                <button class="ql-bold" type="button">
+                                    <img src="../img/icons/bold.svg" alt="">
+                                </button>
+                                <button class="ql-italic" type="button">
+                                    <img src="../img/icons/italic.svg" alt="">
+                                </button>
+                                <button class="ql-underline" type="button">
+                                    <img src="../img/icons/underline.svg" alt="">
+                                </button>
+                                <button class="ql-strike" type="button">
+                                    <img src="../img/icons/strike.svg" alt="">
+                                </button>
+                                <button class="ql-spoiler" type="button">
+                                    <img src="../img/icons/spoiler.svg" alt="">
+                                    <span>Spoiler!</span>
+                                </button>
+                            </div>
+                            <div container="#my-toolbar-container" class="ql-container ql-snow">
+                                <div class="ql-tooltip ql-hidden">
+                                    <input type="text" placeholder="Напишите отзыв о фильме">
+                                </div>
+                            </div>
+                            <div class="feedback__send">
+                                <button class="btn disabled" disabled="">
+                                    Отправить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="feedback_container">
+                            <p class="feedback__empty">Пока что нет отзывов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__top">
+                    <div class="footer__left">
+                        <div class="footer_logo">
+                            <img src="../img/footer_logo.png" width="422" height="248" alt="OG Movie">
+                        </div>
+                        <div class="footer__left-content">Почувствуйте магию фильмов в формате HD - OG.MOVIE, ваш билет к качественному онлайн-просмотру!</div>
+                    </div>
+                    <div class="footer__right">
+                        <div class="footer__right-item">
+                            <h4 class="footer__right-title">Меню</h4>
+                            <h3 class="footer__right-subtitle">
+                                <a aria-current="page" href="/og" class="router-link-active router-link-exact-active">Главная</a>
+                            </h3>
+                            <div>
+                                <h3 class="footer__right-subtitle">
+                                    <a href="/catalog">Каталог</a>
+                                </h3>
+                                <div class="footer__right-subtitle--subitems">
+                                  <a href="/catalog/film">Фильмы</a>
+                                </div>
+                                <div class="footer__right-subtitle--subitems">
+                                  <a href="/catalog/series">Сериалы</a>
+                                </div>
+                                <div class="footer__right-subtitle--subitems">
+                                  <a href="/catalog/tv-show">Телешоу</a>
+                                </div>
+                                <div class="footer__right-subtitle--subitems">
+                                  <a href="/catalog/cartoon">Мультфильмы</a>
+                                </div>
+                                <div class="footer__right-subtitle--subitems">
+                                  <a href="/catalog/cartoon-series">Мультсериалы</a>
+                                </div>
+                                <div class="footer__right-subtitle--subitems">
+                                  <a href="/catalog/anime-film">Аниме</a>
+                                </div>
+                                <div class="footer__right-subtitle--subitems">
+                                  <a href="/catalog/anime-series">Аниме-сериалы</a>
+                                </div>
+                            </div>
+                            <h3 class="footer__right-subtitle">
+                                <a>Мои списки</a>
+                            </h3>
+                            <h3 class="footer__right-subtitle">Поиск</h3>
+                        </div>
+                        <div class="footer__right-item">
+                            <h4 class="footer__right-title">Мой аккаунт</h4>
+                            <h3 class="footer__right-subtitle">
+                                <a aria-current="page" href="/" class="router-link-active router-link-exact-active">Язык</a>
+                            </h3>
+                            <h3 class="footer__right-subtitle">
+                                <a>Поддержка</a>
+                            </h3>
+                            <h3 class="footer__right-subtitle">FAQ</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__bottom-left"> © 2024 OG.Movie Все права защищены</div>
+                    <ul class="footer__bottom-right">
+                        <li>
+                            <a href="/advertisers" class="footer__bottom-link">Рекламодателям</a>
+                        </li>
+                        <li>
+                            <a href="/right-holders" class="footer__bottom-link">Правообладателям</a>
+                        </li>
+                        <li>
+                            <a href="/policy" class="footer__bottom-link">Политика конфиденциальности</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+<!--    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+    <!--    <script src="https://roma-kovalevskyi.github.io/og/js/main.js"></script>-->
+    <script src="../js/jquery.js"></script>
+    <script>
+        // alert('Without document ready');
+
+        // document.getElementById('test-btn').addEventListener('click', function() {
+        //     alert('Button without Jquery!!!');
+        // });
+
+        $(document).ready(function () {
+            // alert('Document ready');
+
+            $('#test-btn').on('click', function() {
+                alert('Button clicked!');
+            });
+
+            let sliderPerRow = 5;
+            let slider = $('.main-slider__inner');
+
+            $('.main-slider__pagination-item').on('click', function() {
+                let index = $(this).index();
+
+                let marginLeft = -index * 100;
+                slider.css('margin-left', `${marginLeft}%`);
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+
+            $('.movies_slider').each(function(index, element) {
+                let marginLeft = 0;
+                let sliderContent = $(element).find('.slider-content');
+
+                let sliderItems = sliderContent.children();
+                let sliderItemsCount = sliderItems.length;
+                let sliderMaxMovesCount = sliderItemsCount / sliderPerRow - 1;
+
+                $(element).find('.prev_btn').on('click', function() {
+                    if (marginLeft === 0) return;
+
+                    marginLeft += 100;
+                    sliderContent.css('margin-left', `${marginLeft}%`);
+                });
+
+                $(element).find('.next_btn').on('click', function() {
+                    if (marginLeft === -(sliderMaxMovesCount * 100)) return;
+
+                    marginLeft -= 100;
+                    sliderContent.css('margin-left', `${marginLeft}%`);
+                });
+
+            });
+        });
+    </script>
+</body>
+</html>
