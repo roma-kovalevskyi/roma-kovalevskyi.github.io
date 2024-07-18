@@ -364,14 +364,16 @@
                 if(ajaxUrl){
                     $.ajax({
                         type: "GET",
-                        dataType: "json",
+                        data: {},
+                        // dataType: "json",
                         url: ajaxUrl,
                         success: function (response) {
                             parseAjaxMovieResponse(response);
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
+                            alert(jqXHR.status);
                             alert(textStatus);
-                            console.log(textStatus);
+                            alert(errorThrown);
                         }
 
                     });
