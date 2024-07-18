@@ -347,6 +347,7 @@
                     if(searchValue && searchUrl){
                         $('.search').addClass('searching');
                         alert('beforeAjax');
+                        alert(searchUrl + searchValue);
                         getAjaxData(searchUrl + searchValue);
                         setTimeout(function (){
                             $('#search-close').css('display', 'block');
