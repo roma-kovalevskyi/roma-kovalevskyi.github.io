@@ -55,6 +55,84 @@
             width: 4.4rem;
         }
 
+        .input-left-icon{
+            fill: rgba(255, 255, 255, 0.5);
+        }
+
+        span.input-right-icon{
+            display: none;
+            translate: 0 -50%;
+            left: auto;
+            right: 1.4rem;
+            z-index: 9;
+            fill-opacity: .5;
+            fill: #ffffff;
+            margin-top: -3px;
+            cursor: pointer;
+        }
+
+        .input-right-icon svg{
+            height: auto;
+            margin-bottom: 0;
+            vertical-align: initial;
+            width: auto;
+        }
+
+        .spinner_loading{
+            display: none;
+        }
+
+        .searching .spinner_loading{
+            display: block;
+        }
+
+        .searching .search-icon{
+            display: none;
+        }
+
+        .spinner_OSmW {
+            transform-origin: center;
+            animation: spinner_T6mA .75s step-end infinite
+        }
+
+        @keyframes spinner_T6mA {
+            8.3% {
+                transform: rotate(30deg)
+            }
+            16.6% {
+                transform: rotate(60deg)
+            }
+            25% {
+                transform: rotate(90deg)
+            }
+            33.3% {
+                transform: rotate(120deg)
+            }
+            41.6% {
+                transform: rotate(150deg)
+            }
+            50% {
+                transform: rotate(180deg)
+            }
+            58.3% {
+                transform: rotate(210deg)
+            }
+            66.6% {
+                transform: rotate(240deg)
+            }
+            75% {
+                transform: rotate(270deg)
+            }
+            83.3% {
+                transform: rotate(300deg)
+            }
+            91.6% {
+                transform: rotate(330deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
     </style>
 </head>
 <body>
@@ -78,9 +156,29 @@
             <div class="search__inner">
                 <div class="search__input-box">
                     <span class="input-left-icon">
-                      <img src="../img/icons/search.svg" alt="">
+                      <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0257 13.8473L18.5948 17.4157L17.4157 18.5948L13.8473 15.0257C12.5196 16.09 10.8682 16.6689 9.1665 16.6665C5.0265 16.6665 1.6665 13.3065 1.6665 9.1665C1.6665 5.0265 5.0265 1.6665 9.1665 1.6665C13.3065 1.6665 16.6665 5.0265 16.6665 9.1665C16.6689 10.8682 16.09 12.5196 15.0257 13.8473ZM13.354 13.229C14.4116 12.1414 15.0022 10.6835 14.9998 9.1665C14.9998 5.94317 12.389 3.33317 9.1665 3.33317C5.94317 3.33317 3.33317 5.94317 3.33317 9.1665C3.33317 12.389 5.94317 14.9998 9.1665 14.9998C10.6835 15.0022 12.1414 14.4116 13.229 13.354L13.354 13.229Z"></path>
+                      </svg>
+                      <!-- soiner -->
+                      <svg class="spinner_loading" fill="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <g class="spinner_OSmW">
+                            <rect x="11" y="1" width="2" height="5" opacity=".14"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(30 12 12)" opacity=".29"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(60 12 12)" opacity=".43"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(90 12 12)" opacity=".57"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(120 12 12)" opacity=".71"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(150 12 12)" opacity=".86"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(180 12 12)"></rect>
+                          </g>
+                      </svg>
+                      <!-- soiner -->
                     </span>
                     <input id="input" autocomplete="off" class="search__input" maxlength="100" type="text" placeholder="Введите название или ключевое слово">
+                    <span id="search-close" class="input-right-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 10.586L9.172 7.757L7.757 9.172L10.586 12L7.757 14.828L9.172 16.243L12 13.414L14.828 16.243L16.243 14.828L13.414 12L16.243 9.172L14.828 7.757L12 10.586Z"></path>
+                      </svg>
+                    </span>
                     <div class="frame_items">
                         <!-- item -->
 <!--                        <div class="search__item">-->
@@ -230,15 +328,30 @@
 
             $('#input').on('keyup', {search_url : searchUrl } , searchResult);
 
+            $('#search-close').on('click', function (){
+                $('#input').val('');
+                $('.frame_items').empty();
+                $(this).css('display', 'none');
+            });
+
             function searchResult(event){
                 var searchValue = $(event.target).val();
                 var searchUrl = event.data.search_url;
-                if(searchValue && searchUrl){
-                    clearTimeout(timerSearch);
-                    timerSearch = setTimeout(function () {
+                clearTimeout(timerSearch);
+                timerSearch = setTimeout(function () {
+                    if(searchValue && searchUrl){
+                        $('.search').addClass('searching');
                         getAjaxData(searchUrl + searchValue);
-                    }, 1000 || 0);
-                }
+                        setTimeout(function (){
+                            $('#search-close').css('display', 'block');
+                            $('.search').removeClass('searching');
+                        }, 300);
+                    }else {
+                        $('.frame_items').empty();
+                        $('#search-close').css('display', 'none');
+                    }
+
+                }, 1000 || 0);
             }
 
             function getAjaxData(ajaxUrl){
@@ -259,10 +372,9 @@
             }
 
             function parseAjaxMovieResponse(response){
-                if(response.data.movies) {
-                    let responseData = '';
+                var responseData = '';
+                if(response.data.movies && response.data.movies.length) {
                     response.data.movies.forEach(function(movie){
-                        console.log(movie);
                         responseData = responseData + '<div class="search__item">\n' +
                             '                                <div class="search__item--poster">\n' +
                             '                                    <img alt="' + movie.name + '" title="'+ movie.name  +'" src="' + movie.poster  + '">\n' +
@@ -304,8 +416,13 @@
                             '                        </div>' +
                             '</div>';
                     });
-                    $('.frame_items').empty().append(responseData);
+                }else {
+                    responseData = '<div class="empty_search">\n' +
+                                        '<h4>По запросу "tttf" ничего не найдено</h4>\n' +
+                                        '<span>Проверьте правильность ввода запроса</span>\n' +
+                                    '</div>';
                 }
+                $('.frame_items').empty().append(responseData);
             }
 
             console.log('Catalog page is ready');
