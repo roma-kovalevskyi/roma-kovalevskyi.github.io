@@ -22,8 +22,7 @@
 
         .frame_items{
             position: relative;
-            min-height: 100px;
-            max-height: 300px;
+             max-height: 300px;
             overflow-y: scroll;
             padding-left: 1rem;
             padding-right: 1rem;
@@ -347,6 +346,7 @@
                 timerSearch = setTimeout(function () {
                     if(searchValue && searchUrl){
                         $('.search').addClass('searching');
+                        alert('beforeAjax');
                         getAjaxData(searchUrl + searchValue);
                         setTimeout(function (){
                             $('#search-close').css('display', 'block');
@@ -370,6 +370,7 @@
                             parseAjaxMovieResponse(response);
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
+                            alert(textStatus);
                             console.log(textStatus);
                         }
 
@@ -378,8 +379,10 @@
             }
 
             function parseAjaxMovieResponse(response){
+                alert('successAjax');
                 var responseData = '';
                 if(response.data.movies && response.data.movies.length) {
+                    alert(response.data.movies[0].name);
                     response.data.movies.forEach(function(movie){
                         responseData = responseData + '<div class="search__item">\n' +
                             '                                <div class="search__item--poster">\n' +
