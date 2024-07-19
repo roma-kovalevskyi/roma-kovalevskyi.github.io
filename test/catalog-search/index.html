@@ -22,32 +22,39 @@
             color: rgba(255, 255, 255, .8);
         }
 
+        .search__input:hover:not(.disabled),
+        .search__input:focus:not(.disabled){
+            border: 1px solid hsla(0, 0% , 100%, .5);
+        }
+
         .frame_items{
+            margin-top: 10px;
+            border-radius: 6px;
+            background: #211d1c;
+        }
+
+        .search_items{
             position: relative;
             max-height: 47rem;
             overflow-y: scroll;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            /*padding-top: 1.8rem;*/
-            margin-top: 1.8rem;
-            background: #211d1c;
+            padding-top: 18px;
+            padding-left: 10px;
+            padding-right: 10px;
             z-index: 100;
         }
 
-        .frame_items::-webkit-scrollbar {
+        .search_items::-webkit-scrollbar {
             background: #d0ac9033;
             width: 8px
         }
 
-        .frame_items::-webkit-scrollbar-thumb {
+        .search_items::-webkit-scrollbar-thumb {
             background: #bb561d;
             border-radius: 20px
         }
 
         .search__item{
             position: relative;
-            margin-top: 2rem;
-            padding-top: 2rem;
             margin-bottom: 2rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid hsla(26,41%,69%,.16);
@@ -125,8 +132,34 @@
             fill: rgba(255, 255, 255, 0.5);
         }
 
+        .empty_search{
+            padding: 10px;
+            text-align: center;
+        }
+
         .empty_search span{
             position: static;
+            font-size: 10px;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .empty_search h4{
+            margin-bottom: 10px;
+        }
+
+        .show__all_results{
+            display: inline-block;
+            background: #383838;
+            border-radius: 0 0 14px 14px;
+            justify-content: center;
+            margin: 2.2rem 0 0 -2.2rem;
+            padding: 1.5rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .show__all_results .h5{
+            font-size: 14px;
         }
 
         span.input-right-icon{
@@ -139,6 +172,7 @@
             fill: #ffffff;
             margin-top: -3px;
             cursor: pointer;
+            transition: all 0.3s ease-out;
         }
 
         .input-right-icon svg{
@@ -146,6 +180,11 @@
             margin-bottom: 0;
             vertical-align: initial;
             width: auto;
+        }
+
+
+        .input-right-icon:hover{
+            fill-opacity: 1;
         }
 
         .spinner_loading{
@@ -236,8 +275,13 @@
                 </button>
             </div>
         </div>
+<<<<<<< HEAD
+    </header>
+    <!-- search -->
+=======
     </div>
 </header>
+>>>>>>> ae946cc568cb2377757ef5d31663421c1f1c287e
     <div class="search">
         <div class="container">
             <div class="search__inner">
@@ -266,54 +310,12 @@
                          <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 10.586L9.172 7.757L7.757 9.172L10.586 12L7.757 14.828L9.172 16.243L12 13.414L14.828 16.243L16.243 14.828L13.414 12L16.243 9.172L14.828 7.757L12 10.586Z"></path>
                       </svg>
                     </span>
-                    <div class="frame_items">
-                        <!-- item -->
-<!--                        <div class="search__item">-->
-<!--                            <div class="search__item">-->
-<!--                                <div class="search__item&#45;&#45;poster">-->
-<!--                                    <img alt="Выходные!" title="Выходные!" src="https://api.og.movie/storage/movie_posters/media/67472/poster_rtt_23852_ru.jpg">-->
-<!--                                </div>-->
-<!--                                <div class="search__item&#45;&#45;left">-->
-<!--                                    <div class="search__item&#45;&#45;info">-->
-<!--                                        <h5>Выходные!</h5>-->
-<!--                                        <div class="tags item__tags" gap="16">-->
-<!--                                            <div class="tag">2009</div>-->
-<!--                                            <div class="tag">IMDb 4.9</div>-->
-<!--                                        </div>-->
-<!--                                        <div class="hover_preview__categories">-->
-<!--                                            <div class="hover_preview__category">Приключения</div>-->
-<!--                                            <div class="hover_preview__category">Комедия</div>-->
-<!--                                            <div class="hover_preview__category">Мелодрама</div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="search__item&#45;&#45;btns">-->
-<!--                                        <button class="btn">-->
-<!--                                            <span class="nuxt-icon nuxt-icon&#45;&#45;fill button-square__icon">-->
-<!--                                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                                                    <path d="M15.6929 10.5498L1.07185 19.8893C0.967986 19.9555 0.847316 19.9935 0.722695 19.9992C0.598075 20.005 0.474171 19.9782 0.36418 19.9218C0.25419 19.8653 0.162231 19.7814 0.0980994 19.6788C0.0339676 19.5763 6.44497e-05 19.459 0 19.3395V0.660533C6.44497e-05 0.540991 0.0339676 0.423705 0.0980994 0.321165C0.162231 0.218626 0.25419 0.134673 0.36418 0.0782491C0.474171 0.0218253 0.598075 -0.00495703 0.722695 0.000755024C0.847316 0.00646708 0.967986 0.0444598 1.07185 0.110686L15.6929 9.45015C15.7874 9.51051 15.8648 9.59227 15.9184 9.68819C15.972 9.78411 16 9.89121 16 10C16 10.1088 15.972 10.2159 15.9184 10.3118C15.8648 10.4077 15.7874 10.4895 15.6929 10.5498V10.5498Z"-->
-<!--                                                          fill="black">-->
-<!--                                            </span>-->
-<!--                                        </button>-->
-<!--                                        <button class="btn transparent_white">-->
-<!--                                            <span class="nuxt-icon nuxt-icon&#45;&#45;fill button-square__icon">-->
-<!--                                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                                                    <path fill-rule="evenodd" clip-rule="evenodd"-->
-<!--                                                          d="M9.0012 2.08845C11.1054 -0.53572 14.6045 -0.367386 16.427 1.20678C18.3629 2.87761 18.4962 6.21845 16.567 9.55595C15.292 11.9109 12.0395 14.2876 9.31287 15.8576C9.12037 15.9684 8.88203 15.9684 8.68953 15.8576C5.96453 14.2884 2.71453 11.9143 1.4412 9.56595C-0.4938 6.22178 -0.3613 2.87845 1.57537 1.20678C3.39787 -0.367386 6.89703 -0.53572 9.0012 2.08845ZM8.46037 3.50761C6.9412 0.883447 3.9112 0.840113 2.39203 2.15261C1.6462 2.79678 1.29287 3.77178 1.29287 4.89928C1.29287 6.13095 1.70953 7.53511 2.52453 8.94178C2.52787 8.94761 2.53037 8.95261 2.5337 8.95845C3.6687 11.0584 6.53203 13.1384 9.0012 14.5926C11.4704 13.1384 14.3337 11.0584 15.4687 8.95845C15.472 8.95261 15.4745 8.94761 15.4779 8.94178C16.2929 7.53511 16.7095 6.13095 16.7095 4.89928C16.7095 3.77178 16.3562 2.79678 15.6104 2.15261C14.0912 0.840113 11.0612 0.883447 9.54203 3.50761C9.43037 3.70095 9.22453 3.82011 9.0012 3.82011C8.77787 3.82011 8.57203 3.70095 8.46037 3.50761Z"-->
-<!--                                                          fill="white">-->
-<!--                                                    </path>-->
-<!--                                                </svg>-->
-<!--                                            </span>-->
-<!--                                        </button>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-                        <!-- item -->
-                    </div>
+                    <div class="frame_items"></div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- search -->
     <div class="film-content">
         <div class="container">
             <div class="film-content__inner">
@@ -464,15 +466,16 @@
 
             function parseAjaxMovieResponse(response){
                 var responseData = '';
-                var movieCatagory = '';
                 if(response.data.movies && response.data.movies.length) {
-                    response.data.movies.forEach(function(movie){
-                        movie.genres.forEach(function(genres) {
-                            movieCatagory = movieCatagory + '<div class="hover_preview__category">'+ genres.name +'</div>';
+                    responseData = '<div class="search_items">';
+                    response.data.movies.forEach(function (movie) {
+                        var movieCatagory = '';
+                        movie.genres.forEach(function (genres) {
+                            movieCatagory = movieCatagory + '<div class="hover_preview__category">' + genres.name + '</div>';
                         });
                         responseData = responseData + '<div class="search__item">\n' +
                             '                                <div class="search__item--poster">\n' +
-                            '                                    <img alt="' + movie.name + '" title="'+ movie.name  +'" src="' + movie.poster  + '">\n' +
+                            '                                    <img alt="' + movie.name + '" title="' + movie.name + '" src="' + movie.poster + '">\n' +
                             '                                </div>\n' +
                             '                                <div class="search__item--left">\n' +
                             '                                    <div class="search__item--info">\n' +
@@ -481,10 +484,10 @@
                             '                                            <div class="tag">' + movie.release_date + '</div>\n' +
                             '                                            <div class="tag">IMDb ' + movie.imdb_rate + '</div>\n' +
                             '                                        </div>\n' +
-                            '                                        <div class="hover_preview__categories">\n'+ movieCatagory +'</div>\n' +
+                            '                                        <div class="hover_preview__categories">\n' + movieCatagory + '</div>\n' +
                             '                                    </div>\n' +
                             '                                    <div class="search__item--btns">\n' +
-                            '                                        <a target="_blank" href="https://og.movie/catalog/' +  movie.type + '/' + movie.slug +'" class="btn">\n' +
+                            '                                        <a target="_blank" href="https://og.movie/catalog/' + movie.type + '/' + movie.slug + '" class="btn">\n' +
                             '                                            <span class="button-square__icon">\n' +
                             '                                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
                             '                                                    <path d="M15.6929 10.5498L1.07185 19.8893C0.967986 19.9555 0.847316 19.9935 0.722695 19.9992C0.598075 20.005 0.474171 19.9782 0.36418 19.9218C0.25419 19.8653 0.162231 19.7814 0.0980994 19.6788C0.0339676 19.5763 6.44497e-05 19.459 0 19.3395V0.660533C6.44497e-05 0.540991 0.0339676 0.423705 0.0980994 0.321165C0.162231 0.218626 0.25419 0.134673 0.36418 0.0782491C0.474171 0.0218253 0.598075 -0.00495703 0.722695 0.000755024C0.847316 0.00646708 0.967986 0.0444598 1.07185 0.110686L15.6929 9.45015C15.7874 9.51051 15.8648 9.59227 15.9184 9.68819C15.972 9.78411 16 9.89121 16 10C16 10.1088 15.972 10.2159 15.9184 10.3118C15.8648 10.4077 15.7874 10.4895 15.6929 10.5498V10.5498Z"\n' +
@@ -503,11 +506,11 @@
                             '                                        </button>\n' +
                             '                                    </div>\n' +
                             '                                </div>\n' +
-                            '                            </div>\n' +
-                            '                        </div>' +
                             '</div>';
                     });
-                }else {
+                    responseData += '</div>';
+                    responseData +='<a href="https://og.movie/search?search=' + searchValue + '" class="show__all_results"><h5>Показать все результаты ('+ response.data.movies.length +')</h5></a>';
+                } else {
                     responseData = '<div class="empty_search">\n' +
                                         '<h4>По запросу "'+ searchValue +'" ничего не найдено</h4>\n' +
                                         '<span>Проверьте правильность ввода запроса</span>\n' +
