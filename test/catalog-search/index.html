@@ -448,9 +448,11 @@
                         type: "GET",
                         data: {},
                         // dataType: "json",
-                        url: ajaxUrl,
+                        // url: ajaxUrl,
+                        url: 'search.php',
                         success: function (response) {
-                            parseAjaxMovieResponse(response);
+                            $('.frame_items').empty().append(response);
+                            // parseAjaxMovieResponse(response);
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
                             console.log(textStatus);
