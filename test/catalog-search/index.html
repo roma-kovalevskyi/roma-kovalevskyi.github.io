@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <style>
         .search{
             position: relative;
@@ -204,21 +206,38 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <nav class="header__nav">
-                    <a class="header__nav-link active" href="/test">Главная</a>
-                    <a class="header__nav-link" href="/test/catalog">Каталог</a>
-                    <a class="header__nav-link header__logo" href="/test">
-                        <img src="../img/logo_og.png" alt="Logo">
-                    </a>
-                    <a class="header__nav-link" href="/test">Мои списки</a>
-                    <a class="header__nav-link" href="/test">Мой кабинет</a>
-                </nav>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__menu-btn">
+                <button class="btn burger_btn">
+                    <div id="nav-icon2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+            <nav class="header__nav">
+                <a class="header__nav-link active" href="/test">Главная</a>
+                <a class="header__nav-link" href="/test/catalog">Каталог</a>
+                <a class="header__nav-link header__logo" href="/test">
+                    <img src="../img/logo_og.png" alt="Logo">
+                </a>
+                <a class="header__nav-link" href="/test">Мои списки</a>
+                <a class="header__nav-link" href="/test">Мой кабинет</a>
+            </nav>
+            <div class="header__search-mob">
+                <button class="header__search-mob-btn">
+                    <img src="../img/icons/search_white.svg" alt="Search">
+                </button>
             </div>
         </div>
-    </header>
+    </div>
+</header>
     <div class="search">
         <div class="container">
             <div class="search__inner">
@@ -307,7 +326,7 @@
             <div class="footer__inner">
                 <div class="footer__top">
                     <div class="footer__left">
-                        <div class="footer_logo">
+                        <div class="footer__logo">
                             <img src="../img/footer_logo.png" width="422" height="248" alt="OG Movie">
                         </div>
                         <div class="footer__left-content">Почувствуйте магию фильмов в формате HD - OG.MOVIE, ваш билет к качественному онлайн-просмотру!</div>
@@ -381,7 +400,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </footer>
