@@ -447,7 +447,8 @@
                     $.ajax({
                         type: "GET",
                         data: {},
-                        // dataType: "json",
+                        dataType: "json",
+                        crossDomain: true,
                         url: ajaxUrl,
                         success: function (response) {
                             parseAjaxMovieResponse(response);
