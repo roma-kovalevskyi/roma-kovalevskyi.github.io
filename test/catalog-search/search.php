@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 
 echo '<div class="search__item">
                             <div class="search__item">

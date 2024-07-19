@@ -449,10 +449,11 @@
                         data: {},
                         // dataType: "json",
                         // url: ajaxUrl,
-                        url: 'search.json',
+                        // url: 'search.json',
+                        url: 'search.php',
                         success: function (response) {
-                            // $('.frame_items').empty().append(response);
-                            parseAjaxMovieResponse(response);
+                            $('.frame_items').empty().append(response);
+                            // parseAjaxMovieResponse(response);
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
                             console.log(textStatus);
