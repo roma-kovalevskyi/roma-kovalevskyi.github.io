@@ -13,12 +13,40 @@
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
     <style>
+        .slick-dotted.slick-slider {
+            margin-bottom: 0;
+        }
+
         .main-slider .slick-dots {
             max-width: max-content;
             bottom: 40px;
             right: 40px;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .main-slider .slick-dots {
+                bottom: 32px;
+            }
+        }
+
+        @media screen and (max-width: 959px) {
+            .main-slider .slick-dots {
+                bottom: 14px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .main-slider .slick-dots {
+                bottom: auto;
+                right: auto;
+                top: 140px;
+                left: 50%;
+                margin-left: -45px;
+            }
         }
 
         .slick-dots li {
@@ -67,7 +95,7 @@
         }
 
         .slider-content .slide__img{
-            height: 288px;
+            height: 272px;
         }
 
         .slider-content .slick-next,
@@ -90,7 +118,7 @@
 
         .slider-arrow {
             position: absolute;
-            top: 35%;
+            top: 32%;
             display: inline-block;
             width: 50px;
             height: 50px;
@@ -148,6 +176,18 @@
 <header class="header">
     <div class="container">
         <div class="header__inner">
+            <div class="header__menu-btn">
+                <button class="btn burger_btn">
+                    <div id="nav-icon2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
             <nav class="header__nav">
                 <a class="header__nav-link active" href="/test">Главная</a>
                 <a class="header__nav-link" href="/test/catalog">Каталог</a>
@@ -157,6 +197,11 @@
                 <a class="header__nav-link" href="/test">Мои списки</a>
                 <a class="header__nav-link" href="/test">Мой кабинет</a>
             </nav>
+            <div class="header__search-mob">
+                <button class="header__search-mob-btn">
+                    <img src="img/icons/search_white.svg" alt="Search">
+                </button>
+            </div>
         </div>
     </div>
 </header>
@@ -730,7 +775,7 @@
         <div class="footer__inner">
             <div class="footer__top">
                 <div class="footer__left">
-                    <div class="footer_logo">
+                    <div class="footer__logo">
                         <img src="img/footer_logo.png" width="422" height="248" alt="OG Movie">
                     </div>
                     <div class="footer__left-content">Почувствуйте магию фильмов в формате HD - OG.MOVIE, ваш билет к качественному онлайн-просмотру!</div>
@@ -804,7 +849,6 @@
                     </li>
                 </ul>
             </div>
-
         </div>
     </div>
 </footer>
@@ -821,6 +865,7 @@
         $(".slider-content").slick({
             arrows: true,
             dots: false,
+            infinite: false,
             slidesToShow: 6,
             slidesToScroll: 2,
             prevArrow:'<button class="slider-arrow slider-prev"><img src="img/icons/prev_arrow_slider.png" alt=""></button>',
@@ -833,7 +878,7 @@
                     }
                 },
                 {
-                    breakpoint: 1200,
+                    breakpoint: 1199,
                     settings: {
                         slidesToShow: 5,
                     }
@@ -841,7 +886,14 @@
                 {
                     breakpoint: 767,
                     settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
                         slidesToShow: 3,
+                        arrows: false,
                     }
                 }
             ]
