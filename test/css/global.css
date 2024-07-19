@@ -58,6 +58,9 @@ input {
 }
 
 button {
+    background-color: transparent;
+    border: none;
+    outline: none;
     cursor: pointer;
 }
 
@@ -80,13 +83,13 @@ h2 {
     color: #ffffff;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     h2 {
         font-size: 2.2rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     h2 {
         font-size: 1.6rem;
     }
@@ -98,13 +101,13 @@ h3 {
     color: #ffffff;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     h3 {
         font-size: 2.4rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     h3 {
         font-size: 1.8rem;
     }
@@ -122,19 +125,19 @@ h4 {
     font-weight: 700;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     h4 {
         font-size: 2rem;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     h4 {
         font-size: 1.8rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     h4 {
         font-size: 1.4rem;
     }
@@ -146,19 +149,19 @@ h5 {
     line-height: 1.4;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     h5 {
         font-size: 1.4rem;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     h5 {
         font-size: 1.2rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     h5 {
         font-size: 1.2rem;
         font-weight: 600;
@@ -173,9 +176,27 @@ p {
 
 .container {
     margin: 0 auto;
-    max-width: 1240px;
-    padding: 0 16px;
+    max-width: 1280px;
+    padding: 0 40px;
     position: relative;
     width: 100%;
     z-index: 3;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 16px;
+    }
 }

@@ -1,0 +1,212 @@
+.header {
+    padding: 2rem 0;
+}
+
+@media screen and (max-width: 850px) {
+    .header {
+        padding: 0;
+    }
+}
+
+.header__inner {
+    text-align: center;
+    position: relative;
+}
+
+@media screen and (max-width: 850px) {
+    .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.header__nav {
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+.header__nav-link {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 15px;
+    vertical-align: middle;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.header__nav-link.active {
+    background: #bb561d;
+    border: 1px solid #f5b484;
+}
+
+.header__nav-link:not(.header__logo) {
+    margin: 0 50px;
+}
+
+.header__nav-link:first-child {
+    margin-left: 0;
+}
+.header__nav-link:last-child {
+    margin-right: 0;
+}
+
+.header__logo img {
+    max-width: 190px;
+}
+
+@media screen and (max-width: 1600px) {
+    .header__logo img {
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .header__nav-link {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        padding: 7px 12px;
+    }
+
+    .header__logo img {
+        max-width: 110px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .header__logo img {
+        max-width: 76px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .header__nav-link {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        padding: 5px 12px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header__nav-link:not(.header__logo) {
+        display: none;
+    }
+}
+
+.header__search-mob {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .header__search-mob {
+        display: flex;
+    }
+}
+
+/* Burger button */
+.burger_btn {
+    display: none !important;
+}
+
+@media screen and (max-width: 850px) {
+    .burger_btn {
+        display: flex !important;
+        width: 42px;
+        border: 1px solid #f5b484 !important;
+        padding: 10px !important;
+    }
+}
+
+#nav-icon2 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: block;
+}
+#nav-icon2 span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background: white;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#nav-icon2 span:nth-child(even) {
+    left: 50%;
+    border-radius: 0 2px 2px 0;
+}
+#nav-icon2 span:nth-child(odd) {
+    left: 0px;
+    border-radius: 2px 0 0 2px;
+}
+#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
+    top: 0px;
+}
+#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
+    top: 9px;
+}
+#nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
+    top: 18px;
+}
+#nav-icon2.open span {
+    width: 100%;
+}
+#nav-icon2.open span:nth-child(1), #nav-icon2.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#nav-icon2.open span:nth-child(2), #nav-icon2.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#nav-icon2.open span:nth-child(1) {
+    left: 0px;
+    top: 9px;
+}
+#nav-icon2.open span:nth-child(2) {
+    left: calc(50% - 10px);
+    top: 9px;
+}
+#nav-icon2.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+}
+#nav-icon2.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+}
+#nav-icon2.open span:nth-child(5) {
+    left: 0px;
+    top: 9px;
+}
+#nav-icon2.open span:nth-child(6) {
+    left: calc(50% - 10px);
+    top: 9px;
+}
