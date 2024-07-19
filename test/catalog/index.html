@@ -12,6 +12,237 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <style>
+        .search{
+            position: relative;
+            z-index: 4;
+        }
+
+        .search__input{
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .search__input:hover:not(.disabled),
+        .search__input:focus:not(.disabled){
+            border: 1px solid hsla(0, 0% , 100%, .5);
+        }
+
+        .frame_items{
+            margin-top: 10px;
+            border-radius: 6px;
+            background: #211d1c;
+        }
+
+        .search_items{
+            position: relative;
+            max-height: 47rem;
+            overflow-y: scroll;
+            padding-top: 18px;
+            padding-left: 10px;
+            padding-right: 10px;
+            z-index: 100;
+        }
+
+        .search_items::-webkit-scrollbar {
+            background: #d0ac9033;
+            width: 8px
+        }
+
+        .search_items::-webkit-scrollbar-thumb {
+            background: #bb561d;
+            border-radius: 20px
+        }
+
+        .search__item{
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid hsla(26,41%,69%,.16);
+        }
+
+        .search__item--poster{
+            display: inline-block;
+            max-width: 8.4rem;
+            min-width: 8.4rem;
+        }
+
+        .search__item--info{
+            margin: 0 2.4rem;
+        }
+
+        .search__item--left{
+            display: inline-block;
+            max-width: calc(100% - 190px);
+        }
+
+        .search__item h5{
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .search__item--btns .btn{
+            position: relative;
+        }
+
+        .item__tags{
+            margin: 30px 0;
+        }
+
+        .hover_preview__category{
+            display: contents;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 17px;
+            color: rgba(255, 255, 255, .5);
+            float: left;
+        }
+
+        .hover_preview__category:not(:last-child):after {
+            content: "|";
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .btn{
+            height: 4.4rem;
+            width: 4.4rem;
+        }
+
+        .search__item--btns{
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+        }
+
+        .search__input-box .button-square__icon{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .search__item--btns .btn{
+            float: right;
+            margin-right: 1.6rem;
+        }
+
+        .input-left-icon{
+            fill: rgba(255, 255, 255, 0.5);
+        }
+
+        .empty_search{
+            padding: 10px;
+            text-align: center;
+        }
+
+        .empty_search span{
+            position: static;
+            font-size: 10px;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .empty_search h4{
+            margin-bottom: 10px;
+        }
+
+        .show__all_results{
+            display: inline-block;
+            background: #383838;
+            border-radius: 0 0 14px 14px;
+            justify-content: center;
+            margin: 2.2rem 0 0 -2.2rem;
+            padding: 1.5rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .show__all_results .h5{
+            font-size: 14px;
+        }
+
+        span.input-right-icon{
+            display: none;
+            translate: 0 -50%;
+            left: auto;
+            right: 1.4rem;
+            z-index: 9;
+            fill-opacity: .5;
+            fill: #ffffff;
+            margin-top: -3px;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+
+        .input-right-icon svg{
+            height: auto;
+            margin-bottom: 0;
+            vertical-align: initial;
+            width: auto;
+        }
+
+
+        .input-right-icon:hover{
+            fill-opacity: 1;
+        }
+
+        .spinner_loading{
+            display: none;
+        }
+
+        .searching .spinner_loading{
+            display: block;
+        }
+
+        .searching .search-icon{
+            display: none;
+        }
+
+        .spinner_OSmW {
+            transform-origin: center;
+            animation: spinner_T6mA .75s step-end infinite
+        }
+
+        @keyframes spinner_T6mA {
+            8.3% {
+                transform: rotate(30deg)
+            }
+            16.6% {
+                transform: rotate(60deg)
+            }
+            25% {
+                transform: rotate(90deg)
+            }
+            33.3% {
+                transform: rotate(120deg)
+            }
+            41.6% {
+                transform: rotate(150deg)
+            }
+            50% {
+                transform: rotate(180deg)
+            }
+            58.3% {
+                transform: rotate(210deg)
+            }
+            66.6% {
+                transform: rotate(240deg)
+            }
+            75% {
+                transform: rotate(270deg)
+            }
+            83.3% {
+                transform: rotate(300deg)
+            }
+            91.6% {
+                transform: rotate(330deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
 </head>
 <body>
 <header class="header">
@@ -31,7 +262,7 @@
             </div>
             <nav class="header__nav">
                 <a class="header__nav-link active" href="/test">Главная</a>
-                <a class="header__nav-link" href="/test/catalog">Каталог</a>
+                <a class="header__nav-link" href="/test/catalog/">Каталог</a>
                 <a class="header__nav-link header__logo" href="/test">
                     <img src="../img/logo_og.png" alt="Logo">
                 </a>
@@ -46,18 +277,41 @@
         </div>
     </div>
 </header>
+    <!-- search -->
     <div class="search">
         <div class="container">
             <div class="search__inner">
                 <div class="search__input-box">
                     <span class="input-left-icon">
-                      <img src="../img/icons/search.svg" alt="">
+                      <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0257 13.8473L18.5948 17.4157L17.4157 18.5948L13.8473 15.0257C12.5196 16.09 10.8682 16.6689 9.1665 16.6665C5.0265 16.6665 1.6665 13.3065 1.6665 9.1665C1.6665 5.0265 5.0265 1.6665 9.1665 1.6665C13.3065 1.6665 16.6665 5.0265 16.6665 9.1665C16.6689 10.8682 16.09 12.5196 15.0257 13.8473ZM13.354 13.229C14.4116 12.1414 15.0022 10.6835 14.9998 9.1665C14.9998 5.94317 12.389 3.33317 9.1665 3.33317C5.94317 3.33317 3.33317 5.94317 3.33317 9.1665C3.33317 12.389 5.94317 14.9998 9.1665 14.9998C10.6835 15.0022 12.1414 14.4116 13.229 13.354L13.354 13.229Z"></path>
+                      </svg>
+                      <!-- soiner -->
+                      <svg class="spinner_loading" fill="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <g class="spinner_OSmW">
+                            <rect x="11" y="1" width="2" height="5" opacity=".14"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(30 12 12)" opacity=".29"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(60 12 12)" opacity=".43"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(90 12 12)" opacity=".57"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(120 12 12)" opacity=".71"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(150 12 12)" opacity=".86"></rect>
+                            <rect x="11" y="1" width="2" height="5" transform="rotate(180 12 12)"></rect>
+                          </g>
+                      </svg>
+                      <!-- soiner -->
                     </span>
                     <input id="input" autocomplete="off" class="search__input" maxlength="100" type="text" placeholder="Введите название или ключевое слово">
+                    <span id="search-close" class="input-right-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 10.586L9.172 7.757L7.757 9.172L10.586 12L7.757 14.828L9.172 16.243L12 13.414L14.828 16.243L16.243 14.828L13.414 12L16.243 9.172L14.828 7.757L12 10.586Z"></path>
+                      </svg>
+                    </span>
+                    <div class="frame_items"></div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- search -->
     <div class="film-content">
         <div class="container">
             <div class="film-content__inner">
@@ -151,6 +405,116 @@
     <script src="../js/jquery.js"></script>
     <script>
         $(document).ready(function () {
+            var timerSearch = 0;
+            var originApiUrl = 'https://api.og.movie/api/v1.0/';
+            var ajaxRouteUrl = "common/movies/search?query=";
+            var searchUrl = originApiUrl + ajaxRouteUrl;
+            var searchValue = '';
+
+            $('#input').on('keyup', {search_url : searchUrl } , searchResult);
+
+            $('#search-close').on('click', function (){
+                $('#input').val('');
+                $('.frame_items').empty();
+                $(this).css('display', 'none');
+            });
+
+            function searchResult(event){
+                searchValue = $(event.target).val();
+                var searchUrl = event.data.search_url;
+                clearTimeout(timerSearch);
+                timerSearch = setTimeout(function () {
+                    if(searchValue && searchUrl){
+                        if(searchValue.length === 1){
+                            searchValue = 'null';
+                        }
+                        $('.search').addClass('searching');
+                        getAjaxData(searchUrl + searchValue);
+                        setTimeout(function (){
+                            $('#search-close').css('display', 'block');
+                            $('.search').removeClass('searching');
+                        }, 300);
+                    }else {
+                        $('.frame_items').empty();
+                        $('#search-close').css('display', 'none');
+                    }
+
+                }, 1000 || 0);
+            }
+
+            function getAjaxData(ajaxUrl){
+                if(ajaxUrl){
+                    $.ajax({
+                        type: "GET",
+                        data: {},
+                        // dataType: "json",
+                        url: ajaxUrl,
+                        success: function (response) {
+                            parseAjaxMovieResponse(response);
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            console.log(textStatus);
+                        }
+
+                    });
+                }
+            }
+
+            function parseAjaxMovieResponse(response){
+                var responseData = '';
+                if(response.data.movies && response.data.movies.length) {
+                    responseData = '<div class="search_items">';
+                    response.data.movies.forEach(function (movie) {
+                        var movieCatagory = '';
+                        movie.genres.forEach(function (genres) {
+                            movieCatagory = movieCatagory + '<div class="hover_preview__category">' + genres.name + '</div>';
+                        });
+                        responseData = responseData + '<div class="search__item">\n' +
+                            '                                <div class="search__item--poster">\n' +
+                            '                                    <img alt="' + movie.name + '" title="' + movie.name + '" src="' + movie.poster + '">\n' +
+                            '                                </div>\n' +
+                            '                                <div class="search__item--left">\n' +
+                            '                                    <div class="search__item--info">\n' +
+                            '                                        <h5>' + movie.name + '</h5>\n' +
+                            '                                        <div class="tags item__tags" gap="16">\n' +
+                            '                                            <div class="tag">' + movie.release_date + '</div>\n' +
+                            '                                            <div class="tag">IMDb ' + movie.imdb_rate + '</div>\n' +
+                            '                                        </div>\n' +
+                            '                                        <div class="hover_preview__categories">\n' + movieCatagory + '</div>\n' +
+                            '                                    </div>\n' +
+                            '                                    <div class="search__item--btns">\n' +
+                            '                                        <a target="_blank" href="https://og.movie/catalog/' + movie.type + '/' + movie.slug + '" class="btn">\n' +
+                            '                                            <span class="button-square__icon">\n' +
+                            '                                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                            '                                                    <path d="M15.6929 10.5498L1.07185 19.8893C0.967986 19.9555 0.847316 19.9935 0.722695 19.9992C0.598075 20.005 0.474171 19.9782 0.36418 19.9218C0.25419 19.8653 0.162231 19.7814 0.0980994 19.6788C0.0339676 19.5763 6.44497e-05 19.459 0 19.3395V0.660533C6.44497e-05 0.540991 0.0339676 0.423705 0.0980994 0.321165C0.162231 0.218626 0.25419 0.134673 0.36418 0.0782491C0.474171 0.0218253 0.598075 -0.00495703 0.722695 0.000755024C0.847316 0.00646708 0.967986 0.0444598 1.07185 0.110686L15.6929 9.45015C15.7874 9.51051 15.8648 9.59227 15.9184 9.68819C15.972 9.78411 16 9.89121 16 10C16 10.1088 15.972 10.2159 15.9184 10.3118C15.8648 10.4077 15.7874 10.4895 15.6929 10.5498V10.5498Z"\n' +
+                            '                                                          fill="black">\n' +
+                            '                                            </span>\n' +
+                            '                                        </a>\n' +
+                            '                                        <button class="btn transparent_white">\n' +
+                            '                                            <span class="button-square__icon">\n' +
+                            '                                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                            '                                                    <path fill-rule="evenodd" clip-rule="evenodd"\n' +
+                            '                                                          d="M9.0012 2.08845C11.1054 -0.53572 14.6045 -0.367386 16.427 1.20678C18.3629 2.87761 18.4962 6.21845 16.567 9.55595C15.292 11.9109 12.0395 14.2876 9.31287 15.8576C9.12037 15.9684 8.88203 15.9684 8.68953 15.8576C5.96453 14.2884 2.71453 11.9143 1.4412 9.56595C-0.4938 6.22178 -0.3613 2.87845 1.57537 1.20678C3.39787 -0.367386 6.89703 -0.53572 9.0012 2.08845ZM8.46037 3.50761C6.9412 0.883447 3.9112 0.840113 2.39203 2.15261C1.6462 2.79678 1.29287 3.77178 1.29287 4.89928C1.29287 6.13095 1.70953 7.53511 2.52453 8.94178C2.52787 8.94761 2.53037 8.95261 2.5337 8.95845C3.6687 11.0584 6.53203 13.1384 9.0012 14.5926C11.4704 13.1384 14.3337 11.0584 15.4687 8.95845C15.472 8.95261 15.4745 8.94761 15.4779 8.94178C16.2929 7.53511 16.7095 6.13095 16.7095 4.89928C16.7095 3.77178 16.3562 2.79678 15.6104 2.15261C14.0912 0.840113 11.0612 0.883447 9.54203 3.50761C9.43037 3.70095 9.22453 3.82011 9.0012 3.82011C8.77787 3.82011 8.57203 3.70095 8.46037 3.50761Z"\n' +
+                            '                                                          fill="white">\n' +
+                            '                                                    </path>\n' +
+                            '                                                </svg>\n' +
+                            '                                            </span>\n' +
+                            '                                        </button>\n' +
+                            '                                    </div>\n' +
+                            '                                </div>\n' +
+                            '</div>';
+                    });
+                    responseData += '</div>';
+                    responseData +='<a href="https://og.movie/search?search=' + searchValue + '" class="show__all_results"><h5>Показать все результаты ('+ response.data.movies.length +')</h5></a>';
+                } else {
+                    responseData = '<div class="empty_search">\n' +
+                                        '<h4>По запросу "'+ searchValue +'" ничего не найдено</h4>\n' +
+                                        '<span>Проверьте правильность ввода запроса</span>\n' +
+                                    '</div>';
+                }
+                $('.frame_items').empty().append(responseData);
+            }
+
             console.log('Catalog page is ready');
         });
     </script>
