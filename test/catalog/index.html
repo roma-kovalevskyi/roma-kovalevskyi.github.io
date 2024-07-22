@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="nofollow, noindex"/>
     <title>Document</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/fonts.css">
@@ -13,6 +14,16 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/footer.css">
     <style>
+        ::-webkit-scrollbar {
+            background: #d0ac9033;
+            width: 8px
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bb561d;
+            border-radius: 20px
+        }
+
         .search{
             position: relative;
             z-index: 4;
@@ -149,10 +160,9 @@
 
         .show__all_results{
             display: inline-block;
-            background: #383838;
-            border-radius: 0 0 14px 14px;
+            background: rgba(208,172,144, .29);
             justify-content: center;
-            margin: 2.2rem 0 0 -2.2rem;
+            margin: 2.2rem auto -2.2rem;
             padding: 1.5rem;
             width: 100%;
             text-align: center;
@@ -242,6 +252,68 @@
                 transform: rotate(360deg)
             }
         }
+
+        .catalog{
+            margin-top: 40px;
+        }
+
+        .catalog__content{
+            background: #211d1c;
+            border-radius: 14px;
+            margin: 10px auto 0;
+            max-width: 1228px;
+            padding: 24px;
+            position: relative;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .catalog__posters{
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: calc(100% + 30px);
+            margin-left: -15px;
+        }
+
+        .catalog__poster{
+            width: calc(100% / 6 - 30px);
+            margin: 15px;
+            text-align: center;
+            transition: all 0.3s ease-out;
+        }
+
+        .catalog__poster:hover {
+            cursor: pointer;
+            scale: 1.05;
+        }
+
+        .catalog__poster a{
+            display: block;
+        }
+
+        .catalog__poster img{
+            border: 1px solid #f5b484;
+            border-radius: 0.6rem;
+            height: 260px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .catalog__poster-title{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+            text-align: center;
+            margin: 10px auto 0;
+        }
     </style>
 </head>
 <body>
@@ -261,13 +333,13 @@
                 </button>
             </div>
             <nav class="header__nav">
-                <a class="header__nav-link active" href="/test">Главная</a>
-                <a class="header__nav-link" href="/test/catalog/">Каталог</a>
-                <a class="header__nav-link header__logo" href="/test">
+                <a class="header__nav-link active" href="/">Главная</a>
+                <a class="header__nav-link" href="/catalog/">Каталог</a>
+                <a class="header__nav-link header__logo" href="/">
                     <img src="../img/logo_og.png" alt="Logo">
                 </a>
-                <a class="header__nav-link" href="/test">Мои списки</a>
-                <a class="header__nav-link" href="/test">Мой кабинет</a>
+                <a class="header__nav-link" href="/">Мои списки</a>
+                <a class="header__nav-link" href="/">Мой кабинет</a>
             </nav>
             <div class="header__search-mob">
                 <button class="header__search-mob-btn">
@@ -312,13 +384,25 @@
         </div>
     </div>
     <!-- search -->
-    <div class="film-content">
+    <!-- catalog -->
+    <div class="catalog">
         <div class="container">
-            <div class="film-content__inner">
-                <h1>Каталог</h1>
+            <div class="catalog__content">
+                <div class="filter__top_controls">
+                    <div class="filter__top_controls"></div>
+                </div>
+                <div class="catalog__posters"></div>
             </div>
         </div>
     </div>
+    <!-- catalog -->
+<!--    <div class="film-content">-->
+<!--        <div class="container">-->
+<!--            <div class="film-content__inner">-->
+<!--                <h1>Каталог</h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
@@ -333,11 +417,11 @@
                         <div class="footer__right-item">
                             <h4 class="footer__right-title">Меню</h4>
                             <h3 class="footer__right-subtitle">
-                                <a aria-current="page" href="/test" class="router-link-active router-link-exact-active">Главная</a>
+                                <a aria-current="page" href="/" class="router-link-active router-link-exact-active">Главная</a>
                             </h3>
                             <div>
                                 <h3 class="footer__right-subtitle">
-                                    <a href="/test/search">Каталог</a>
+                                    <a href="/search">Каталог</a>
                                 </h3>
                                 <div class="footer__right-subtitle--subitems">
                                     <a href="/catalog/film">Фильмы</a>
@@ -367,7 +451,7 @@
                             </h3>
                             <!---->
                             <h3 class="footer__right-subtitle">
-                                <a href="/test/search" class="router-link-active router-link-exact-active">Поиск</a>
+                                <a href="/search" class="router-link-active router-link-exact-active">Поиск</a>
                             </h3>
                         </div>
                         <div class="footer__right-item">
@@ -408,10 +492,13 @@
             var timerSearch = 0;
             var originApiUrl = 'https://api.og.movie/api/v1.0/';
             var ajaxRouteUrl = "common/movies/search?query=";
+            var startCatalogUrl = originApiUrl + 'catalog/table?page%5Bnumber%5D=1&page%5Bsize%5D=24';
             var searchUrl = originApiUrl + ajaxRouteUrl;
             var searchValue = '';
 
             $('#input').on('keyup', {search_url : searchUrl } , searchResult);
+
+            getAjaxData(startCatalogUrl, parseCatalogResponse);
 
             $('#search-close').on('click', function (){
                 $('#input').val('');
@@ -429,7 +516,7 @@
                             searchValue = 'null';
                         }
                         $('.search').addClass('searching');
-                        getAjaxData(searchUrl + searchValue);
+                        getAjaxData(searchUrl + searchValue, parseAjaxMovieResponse);
                         setTimeout(function (){
                             $('#search-close').css('display', 'block');
                             $('.search').removeClass('searching');
@@ -442,7 +529,7 @@
                 }, 1000 || 0);
             }
 
-            function getAjaxData(ajaxUrl){
+            function getAjaxData(ajaxUrl, func){
                 if(ajaxUrl){
                     $.ajax({
                         type: "GET",
@@ -451,7 +538,7 @@
                         crossDomain: true,
                         url: ajaxUrl,
                         success: function (response) {
-                            parseAjaxMovieResponse(response);
+                            func(response);
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
                             console.log(textStatus);
@@ -514,6 +601,26 @@
                                     '</div>';
                 }
                 $('.frame_items').empty().append(responseData);
+            }
+
+            function parseCatalogResponse(response){
+                var movies = '';
+                if(response.data.table.items && response.data.table.items.length) {
+                    console.log(response.data.table.items);
+                    response.data.table.items.forEach(function (movie) {
+                        movies += '<div class="catalog__poster">' +
+                                        '<a href="https://og.movie/catalog/' + movie.type + '/' + movie.slug + '" class="catalog__poster-content" alt="' + movie.name + '" title="' + movie.name + '">' +
+                                            '<img src="' + movie.poster + '" width="220" height="330" alt="Джексон и Малоун 2024" loading="lazy" decoding="async" sizes="(max-width: 768px) 150px, 260px" srcset="' + movie.poster + ' 150w, ' + movie.poster + ' 260w, ' + movie.poster + ' 300w, ' + movie.poster + ' 520w" title="' + movie.name + '" class="poster-progressive-image">' +
+                                        '</a>' +
+                                        '<h5 class="catalog__poster-title" title="' + movie.name + '">' + movie.name + ' (2024) </h5>' +
+                            '</div>';
+                    });
+                    // movies = '<h1>Фильмы</h1>';
+                }else {
+                    movies = '<h1>Фильмов не найдено</h1>';
+                }
+                // console.log(response);
+                $('.catalog__posters').empty().append(movies);
             }
 
             console.log('Catalog page is ready');
